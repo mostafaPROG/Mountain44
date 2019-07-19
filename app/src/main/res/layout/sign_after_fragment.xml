@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="match_parent">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent"
+                  android:layout_height="match_parent" android:layoutDirection="rtl">
+        <TextView android:textSize="30sp" android:textColor="@color/colorPrimaryDark" android:gravity="center"
+                  android:id="@+id/textView33" android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:layout_margin="15dp" android:text="ورود" android:fontFamily="@font/yekan"/>
+        <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/gray"
+                                                               android:paddingLeft="15dp" android:paddingRight="15dp"
+                                                               android:layout_width="match_parent"
+                                                               android:layout_height="wrap_content"
+                                                               app:hintAnimationEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText android:textColor="@color/colorPrimaryDark"
+                                                                     android:background="@drawable/background_login_text"
+                                                                     android:paddingLeft="20dp"
+                                                                     android:paddingTop="10dp"
+                                                                     android:paddingRight="20dp"
+                                                                     android:paddingBottom="10dp"
+                                                                     android:layout_width="match_parent"
+                                                                     android:layout_height="wrap_content"
+                                                                     android:hint="نام"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/gray"
+                                                               android:paddingLeft="15dp" android:paddingRight="15dp"
+                                                               android:layout_width="match_parent"
+                                                               android:layout_height="wrap_content"
+                                                               app:hintAnimationEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText android:textColor="@color/colorPrimaryDark"
+                                                                     android:background="@drawable/background_login_text"
+                                                                     android:paddingLeft="20dp"
+                                                                     android:paddingTop="10dp"
+                                                                     android:paddingRight="20dp"
+                                                                     android:paddingBottom="10dp"
+                                                                     android:layout_width="match_parent"
+                                                                     android:layout_height="wrap_content"
+                                                                     android:hint="نام خانوادگی"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/gray"
+                                                               android:paddingLeft="15dp" android:paddingRight="15dp"
+                                                               android:layout_width="match_parent"
+                                                               android:layout_height="wrap_content"
+                                                               app:hintAnimationEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText android:textColor="@color/colorPrimaryDark"
+                                                                     android:background="@drawable/background_login_text"
+                                                                     android:paddingLeft="20dp"
+                                                                     android:paddingTop="10dp"
+                                                                     android:paddingRight="20dp"
+                                                                     android:paddingBottom="10dp"
+                                                                     android:layout_width="match_parent"
+                                                                     android:layout_height="wrap_content"
+                                                                     android:hint="تاریخ تولد (اختیاری)"
+                                                                     android:inputType="date"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout android:textColorHint="@color/gray"
+                                                               android:paddingLeft="15dp" android:paddingRight="15dp"
+                                                               android:layout_width="match_parent"
+                                                               android:layout_height="wrap_content"
+                                                               app:hintAnimationEnabled="true">
+            <com.google.android.material.textfield.TextInputEditText android:textColor="@color/colorPrimaryDark"
+                                                                     android:background="@drawable/background_login_text"
+                                                                     android:paddingLeft="20dp"
+                                                                     android:paddingTop="10dp"
+                                                                     android:paddingRight="20dp"
+                                                                     android:paddingBottom="10dp"
+                                                                     android:layout_width="match_parent"
+                                                                     android:layout_height="wrap_content"
+                                                                     android:hint="شغل (اختیاری)"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton android:layout_gravity="center"
+                                                                               android:id="@+id/sendInformationSignUp"
+                                                                               android:layout_width="wrap_content"
+                                                                               android:layout_height="wrap_content"
+                                                                               android:background="@color/colorPrimaryDark"
+                                                                               android:layout_marginTop="8dp"
+                                                                               android:layout_marginBottom="10dp"
+                                                                               android:src="@drawable/ic_navigate_next_black_24dp"
+                                                                               app:fabCustomSize="70dp"
+                                                                               app:maxImageSize="40dp"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

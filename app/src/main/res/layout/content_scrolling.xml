@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:background="@color/backgroundWhite"
+        android:id="@+id/linearLayout6">
+    <TextView
+            android:text="گروه های منتخب"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView37"
+            android:gravity="right" android:textSize="18sp"
+            android:drawableTint="@color/black"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="10dp" android:paddingRight="10dp"
+            app:layout_constraintStart_toEndOf="@+id/button3" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="1.0" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/tempCardGol"/>
+    <TextView
+            android:text="قله های منتخب"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/textView34"
+            android:textSize="18sp"
+            android:drawableTint="@color/black"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginEnd="8dp"
+            android:paddingLeft="10dp" android:paddingRight="10dp"
+            app:layout_constraintStart_toEndOf="@+id/button2" android:layout_marginStart="8dp"
+            app:layout_constraintHorizontal_bias="1.0"/>
+    <!--<androidx.recyclerview.widget.RecyclerView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="120dp"-->
+    <!--app:layout_constraintStart_toStartOf="parent"-->
+    <!--android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"-->
+    <!--android:id="@+id/recyclerView" android:layout_marginTop="8dp"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/textView34"/>-->
+    <Button
+            android:text="بیشتر"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/button2"
+            app:layout_constraintTop_toTopOf="@+id/textView34"
+            app:layout_constraintBottom_toBottomOf="@+id/textView34" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp"
+            android:background="#FFFFFF" android:textColor="@color/colorPrimaryLight"/>
+    <Button
+            android:text="بیشتر"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/button3"
+            app:layout_constraintTop_toTopOf="@+id/textView37"
+            app:layout_constraintBottom_toBottomOf="@+id/textView37" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:background="#fff"
+            android:textColor="@color/colorPrimaryLight"/>
+    <!--<androidx.recyclerview.widget.RecyclerView-->
+    <!--android:layout_width="0dp"-->
+    <!--android:layout_height="120dp"-->
+    <!--android:layout_marginTop="8dp"-->
+    <!--app:layout_constraintTop_toBottomOf="@+id/textView37" app:layout_constraintEnd_toEndOf="parent"-->
+    <!--android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"-->
+    <!--android:layout_marginStart="8dp"/>-->
+    <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            app:layout_constraintStart_toStartOf="@+id/button2"
+            app:layout_constraintEnd_toEndOf="@+id/textView34"
+            android:id="@+id/tempCardGol"
+            app:cardCornerRadius="8dp" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView34">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" android:layout_weight="1">
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:src="@drawable/kooh2"
+                        android:id="@+id/imageView6" android:layout_weight="1" android:scaleType="centerCrop"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" android:layout_weight="1" android:padding="5dp"
+                    android:gravity="center">
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textView9"
+                        android:text="کوه کلک چال، یخچال پربرف تهران" android:textColor="@color/black"/>
+                <TextView
+                        android:text="کوه کلک چال یکی از کوه‌های شمال تهران است که از سه مسیر بوستان جمشیدیه، گلاب‌دره و دره وزباد، قابل دسترسی می‌باشد. مرتفع‌ترین نقطه کوه کلک چال قله کلک‌چال نام دارد که ارتفاع آن ۳۳۵۰ متر از سطح دریا است."
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textView13" android:textSize="12sp"
+                        android:ellipsize="end" android:ems="10" android:maxLines="5"
+                        android:layout_gravity="center_vertical|end"
+                        android:gravity="right" android:foregroundGravity="fill" android:layout_marginTop="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/button3" app:layout_constraintStart_toStartOf="@+id/button3"
+            app:layout_constraintEnd_toEndOf="@+id/textView37" app:cardCornerRadius="8dp">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" android:layout_weight="1">
+                <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" android:src="@drawable/back_mount2"
+                        android:id="@+id/imageView10" android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_height="match_parent" android:layout_weight="2">
+                <TextView
+                        android:text="گروه کوهنوردی تربت حیدریه"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" android:id="@+id/textView14" android:gravity="center"/>
+                <RatingBar
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp" android:id="@+id/ratingBar" android:rating="4.5"
+                        android:stepSize="0.25" android:layout_gravity="center" android:scaleX="0.5"
+                        android:scaleY="0.5" android:focusable="false" android:clickable="false"
+                        android:fadingEdge="horizontal|vertical" android:saveEnabled="false"
+                        android:focusableInTouchMode="false" android:isIndicator="true"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

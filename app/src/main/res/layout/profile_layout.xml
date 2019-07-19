@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:background="#E2E2E2">
+        <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:theme="?attr/actionBarTheme"
+                android:background="@drawable/back_header"
+                android:minHeight="?attr/actionBarSize" android:id="@+id/toolbarProfile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintTop_toTopOf="parent" app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+                android:isScrollContainer="false"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.47000003"
+                android:id="@+id/layout_constraint" android:layout_marginTop="180dp">
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" app:cardCornerRadius="5dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardElevation="5dp">
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center" android:layout_marginTop="10dp">
+                        <TextView
+                                android:text="مصطفی"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.6"
+                                android:gravity="right"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginBottom="4dp" android:layout_marginRight="8dp"
+                                android:layout_height="30dp" android:id="@+id/nameProfile"
+                                android:textSize="18sp"
+                                android:textColor="@color/black"
+                                android:textDirection="ltr"
+                                android:drawableRight="@drawable/ic_person_black_24dp"
+                                android:drawablePadding="4dp"
+                                android:drawableTint="@color/colorPrimaryDark"/>
+                        <androidx.legacy.widget.Space android:layout_width="0dp"
+                                                      android:layout_weight="0.4"
+                                                      android:layout_height="match_parent"/>
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:layout_gravity="center_vertical">
+                        <TextView
+                                android:text="09152442925"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp" android:id="@+id/nameProfile2"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginBottom="4dp" android:layout_marginRight="8dp"
+                                android:textSize="18sp"
+                                android:textColor="@color/gray" android:focusable="true"
+                                android:gravity="right"
+                                android:drawableRight="@drawable/ic_phone_black_24dp"
+                                android:drawablePadding="4dp"
+                                android:drawableTint="@color/colorPrimaryDark" android:layout_weight="0.6"/>
+                        <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent" android:layout_weight="0.4"
+                                android:gravity="center">
+                            <Button
+                                    android:layout_width="80dp"
+                                    android:layout_height="30dp" android:id="@+id/button"
+                                    tools:layout_editor_absoluteY="140dp"
+                                    tools:layout_editor_absoluteX="198dp" android:text="ویرایش عکس"
+                                    android:textColor="@android:color/white"
+                                    android:background="@drawable/background_strok" android:textSize="12sp"
+                            />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center">
+                        <TextView
+                                android:text="\@mostafa40"
+                                android:layout_width="0dp"
+                                android:layout_height="30dp" android:id="@+id/nameProfile3"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginBottom="4dp" android:layout_marginRight="8dp"
+                                android:textSize="18sp"
+                                android:textColor="@color/gray" android:focusable="true"
+                                android:textDirection="ltr" android:gravity="right|center_vertical"
+                                android:drawableRight="@drawable/ic_person_pin_black_24dp"
+                                android:drawablePadding="4dp"
+                                android:drawableTint="@color/colorPrimaryDark" android:layout_weight="0.6"/>
+                        <androidx.legacy.widget.Space android:layout_width="0dp"
+                                                      android:layout_weight="0.4"
+                                                      android:layout_height="match_parent"/>
+                    </LinearLayout>
+                    <com.google.android.material.internal.BaselineLayout android:layout_width="match_parent"
+                                                                         android:layout_height="0.6dp"
+                                                                         android:alpha="0.4"
+                                                                         android:background="@color/gray"/>
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp">
+                        <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.3"
+                                android:gravity="center"
+                                android:layout_height="match_parent">
+                            <TextView
+                                    android:text="پست"
+                                    android:textColor="@color/gray"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="12sp"
+                                    android:layout_height="wrap_content"/>
+                            <TextView
+                                    android:text="152"
+                                    android:layout_width="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:layout_height="wrap_content" android:id="@+id/postCount"/>
+                        </LinearLayout>
+                        <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.3"
+                                android:gravity="center"
+                                android:layout_height="match_parent">
+                            <TextView
+                                    android:text="دنبال کننده ها"
+                                    android:textColor="@color/gray"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="12sp"
+                                    android:layout_height="wrap_content"/>
+                            <TextView
+                                    android:text="49"
+                                    android:layout_width="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:layout_height="wrap_content" android:id="@+id/followerCount"/>
+                        </LinearLayout>
+                        <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="0dp"
+                                android:layout_weight="0.3"
+                                android:gravity="center"
+                                android:layout_height="match_parent">
+                            <TextView
+                                    android:text="دنبال شونده ها"
+                                    android:textColor="@color/gray"
+                                    android:layout_width="wrap_content"
+                                    android:textSize="12sp"
+                                    android:layout_height="wrap_content"/>
+                            <TextView
+                                    android:text="80"
+                                    android:layout_width="wrap_content"
+                                    android:textColor="@color/black"
+                                    android:textSize="16sp"
+                                    android:layout_height="wrap_content" android:id="@+id/followingCount"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                    <com.google.android.material.internal.BaselineLayout android:layout_width="match_parent"
+                                                                         android:layout_height="0.6dp"
+
+                                                                         android:alpha="0.4"
+                                                                         android:background="@color/gray"/>
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                              android:text="تصاویر"
+                              android:textSize="18sp"
+                              android:textColor="@color/black"
+                              android:layout_marginBottom="4dp"
+                              android:layout_marginLeft="16dp"
+                              android:layout_marginTop="20dp" android:layout_marginRight="16dp"/>
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_marginBottom="16dp"
+                            android:layout_height="wrap_content">
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                      android:layout_marginRight="20dp"
+                                      android:layout_marginLeft="20dp"
+                                      android:orientation="horizontal">
+                            <ImageView android:layout_width="0dp" android:layout_height="100dp"
+                                       android:layout_weight="0.3"
+                                       android:src="@drawable/tempgallery"/>
+                            <ImageView android:layout_width="0dp" android:layout_height="100dp"
+                                       android:layout_weight="0.3"
+                                       android:src="@drawable/tempgallery"
+                                       android:layout_marginLeft="4dp" android:layout_marginRight="4dp"/>
+                            <ImageView android:layout_width="0dp" android:layout_height="100dp"
+                                       android:layout_weight="0.3"
+                                       android:src="@drawable/tempgallery"/>
+                        </LinearLayout>
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                      android:layout_marginRight="20dp"
+                                      android:layout_marginLeft="20dp"
+                                      android:orientation="horizontal" android:layout_marginTop="4dp">
+                            <ImageView android:layout_width="0dp" android:layout_height="100dp"
+                                       android:layout_weight="0.3"
+                                       android:src="@drawable/tempgallery"/>
+                            <ImageView android:layout_width="0dp" android:layout_height="100dp"
+                                       android:layout_weight="0.3"
+                                       android:src="@drawable/tempgallery"
+                                       android:layout_marginLeft="4dp" android:layout_marginRight="4dp"/>
+                            <FrameLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content" android:layout_weight="0.3">
+
+                                <ImageView android:layout_width="match_parent" android:layout_height="100dp"
+                                           android:src="@drawable/tempgallery" android:alpha="0.9"/>
+                                <TextView
+                                        android:text="بیشتر"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content" android:id="@+id/textView3"
+                                        android:layout_gravity="center" android:textColor="#FFFFFF"
+                                        android:textSize="24sp"/>
+                            </FrameLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" android:layout_marginBottom="10dp">
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                                android:src="@drawable/ic_add_a_photo_black_24dp"
+                                android:tint="@color/backgroundWhite"
+                                android:backgroundTint="@color/colorPrimary"
+                                app:fabSize="normal"
+                                android:layout_marginLeft="15dp"
+                                app:elevation="6dp" android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+                        <TextView
+                                android:text="افزودن عکس به گالری"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" android:id="@+id/textView7"
+                                android:layout_weight="1" android:gravity="left"
+                                android:layout_gravity="center_vertical" android:layout_marginLeft="10dp"
+                                android:textColor="@color/colorPrimary"/>
+                    </LinearLayout>
+                    <com.google.android.material.internal.BaselineLayout android:layout_width="match_parent"
+                          android:layout_height="0.6dp"
+                          android:alpha="0.4"
+                          android:background="@color/gray" app:expandedTitleMarginBottom="10dp"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp" app:srcCompat="@drawable/def_prof"
+                android:id="@+id/imageProfile"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="@+id/layout_constraint"
+                app:layout_constraintBottom_toTopOf="@+id/layout_constraint" app:layout_constraintVertical_bias="0.556"
+                app:layout_constraintEnd_toEndOf="@+id/layout_constraint"
+                app:layout_constraintStart_toStartOf="@+id/layout_constraint"
+                app:layout_constraintHorizontal_bias="0.9"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

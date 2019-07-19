@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:layout_width="match_parent"
+                                                   android:background="@color/backgroundWhite"
+                                                   android:id="@+id/layout_constraintSm"
+                                                   android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+            android:id="@+id/teachCardJ"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="@color/colorPrimary2"
+            app:cardCornerRadius="25dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/toolsCardJ" android:onClick="menuCardClick">
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_teach_black_24dp"
+                android:tint="@color/colorPrimaryDark"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+            android:id="@+id/toolsCardJ"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="@color/colorPrimary2"
+            app:cardCornerRadius="25dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/teachCardJ"
+            app:layout_constraintTop_toTopOf="@+id/teachCardJ" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/mapCardJ" app:layout_constraintBottom_toBottomOf="@+id/teachCardJ"
+            android:onClick="menuCardClick">
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_apps_black_24dp"
+                android:tint="@color/colorPrimaryDark"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+            android:id="@+id/mapCardJ"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="@color/colorPrimary2"
+            app:cardCornerRadius="25dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/toolsCardJ"
+            app:layout_constraintTop_toTopOf="@+id/toolsCardJ" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/groupCardJ"
+            app:layout_constraintBottom_toBottomOf="@+id/toolsCardJ" android:onClick="menuCardClick">
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_place_black_24dp"
+                android:tint="@color/colorPrimaryDark"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+            android:id="@+id/groupCardJ"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="@color/colorPrimary2"
+            app:cardCornerRadius="25dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/mapCardJ"
+            app:layout_constraintTop_toTopOf="@+id/mapCardJ" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/profileCardJ"
+            app:layout_constraintBottom_toBottomOf="@+id/mapCardJ" android:onClick="menuCardClick">
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_people_black_24dp"
+                android:tint="@color/colorPrimaryDark"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+            android:id="@+id/profileCardJ"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="@color/colorPrimary2"
+            app:cardCornerRadius="25dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@+id/groupCardJ"
+            app:layout_constraintTop_toTopOf="@+id/groupCardJ" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/storeCardJ"
+            app:layout_constraintBottom_toBottomOf="@+id/groupCardJ" android:onClick="menuCardClick">
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_account_circle_black_24dp"
+                android:tint="@color/colorPrimaryDark"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+            android:id="@+id/storeCardJ"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="@color/colorPrimary2"
+            app:cardCornerRadius="25dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintStart_toEndOf="@+id/profileCardJ"
+            app:layout_constraintTop_toTopOf="@+id/profileCardJ" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="@+id/profileCardJ"
+            android:onClick="menuCardClick">
+        <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="10dp"
+                android:src="@drawable/ic_store_black_24dp"
+                android:tint="@color/colorPrimaryDark"/>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

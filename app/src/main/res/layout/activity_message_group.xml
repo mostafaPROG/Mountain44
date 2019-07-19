@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
+        android:clipToPadding="true"
+        tools:context=".activities.MessageListActivity">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:background="@android:color/white"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintEnd_toEndOf="parent"
+                  android:id="@+id/linearLayout2">
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                android:hint="Write a message"
+                android:textDirection="anyRtl"
+                android:paddingHorizontal="10dp"
+                android:ems="10"
+                android:text=""
+                android:id="@+id/editTextMessageGroup"/>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:padding="10dp">
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="center"
+                    android:padding="10dp"
+                    android:paddingHorizontal="5dp"
+                    android:layout_height="wrap_content" android:src="@drawable/ic_send_black_24dp"
+                    android:backgroundTint="@color/green"
+                    android:tint="@color/green"
+                    android:background="@drawable/background_search"
+                    android:id="@+id/sendMessageBtnGroup"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="0dp"
+            android:layout_height="0dp" android:id="@+id/recyclerViewMessageGroup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar4"/>
+    <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:id="@+id/toolbar4" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                      android:gravity="center_vertical"
+                      android:orientation="horizontal">
+            <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                         android:src="@drawable/ic_arrow_back_black_24dp"
+                         android:id="@+id/backMessageGroup"
+                         android:background="@android:color/transparent"
+                         android:layout_gravity="left|center_vertical"
+                         android:layout_marginRight="16dp" tools:ignore="RtlHardcoded"/>
+            <ImageView android:layout_width="40dp" android:layout_height="40dp"
+                       android:layout_gravity="left|center_vertical"
+                       android:layout_marginRight="8dp"
+                       android:src="@drawable/def_prof" tools:ignore="RtlHardcoded"/>
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent"
+                          android:orientation="vertical"
+                          android:layout_margin="4dp" android:gravity="center|left">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:text="Robert"
+                          android:textStyle="bold"
+                          android:id="@+id/toolbarNameGroup"
+                          android:textSize="14dp"
+                          android:textColor="@color/backgroundWhite"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:text="online"
+                          android:id="@+id/toolbarMemberGroup"
+                          android:textColor="@color/backgroundWhite"
+                          android:textSize="12sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+</androidx.constraintlayout.widget.ConstraintLayout>

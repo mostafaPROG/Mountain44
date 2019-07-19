@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   android:orientation="vertical"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="wrap_content">
+
+    <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp" app:srcCompat="@drawable/def_prof"
+            android:id="@+id/profileReceiver" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+            android:text="mostafa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/nameReceiver" app:layout_constraintStart_toEndOf="@+id/profileReceiver"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@+id/profileReceiver"
+            app:layout_constraintBottom_toBottomOf="@+id/profileReceiver" app:layout_constraintVertical_bias="0.0"
+            android:layout_marginTop="4dp" android:textSize="12sp" android:textColor="@color/gray"/>
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:paddingHorizontal="10dp"
+            android:padding="8dp"
+            android:background="@drawable/background_recived"
+            android:layout_height="wrap_content" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/nameReceiver"
+            app:layout_constraintStart_toStartOf="@+id/nameReceiver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0" android:id="@+id/linearLayout4" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"
+            android:layout_marginEnd="24dp">
+        <TextView
+                android:text="contain the sender’s name"
+                android:layout_width="wrap_content"
+                android:singleLine="false"
+                android:maxEms="13"
+                android:layout_height="wrap_content" android:id="@+id/receivedMessage" android:textSize="14sp"
+                android:textColor="@android:color/black" android:gravity="left"
+        />
+    </LinearLayout>
+    <TextView
+            android:text="17:07"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timeReceivedMessage" app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayout4" android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintTop_toTopOf="@+id/linearLayout4"
+            app:layout_constraintVertical_bias="1.0"/>
+    <ImageView
+            android:layout_width="18dp"
+            android:tint="@color/green"
+            android:layout_height="18dp" android:src="@drawable/ic_done_all_black_24dp"
+            android:id="@+id/checkMessage"
+            app:layout_constraintTop_toTopOf="@+id/linearLayout4"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/timeReceivedMessage" android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/timeReceivedMessage"
+            app:layout_constraintEnd_toEndOf="@+id/timeReceivedMessage" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="1.0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

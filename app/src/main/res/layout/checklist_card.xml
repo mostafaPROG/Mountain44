@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   android:id="@+id/checkListId"
+                                   android:visibility="visible" android:layout_width="0dp" android:layout_height="0dp"
+                                   android:layout_marginTop="8dp" android:layout_marginEnd="8dp"
+                                   app:cardBackgroundColor="#b80745" app:cardCornerRadius="10dp"
+                                   app:layout_constraintBottom_toBottomOf="@+id/heightCardL"
+                                   app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                                   app:layout_constraintHorizontal_chainStyle="spread"
+                                   app:layout_constraintHorizontal_weight="2"
+                                   app:layout_constraintStart_toEndOf="@+id/heightCardL"
+                                   app:layout_constraintTop_toBottomOf="@+id/compassCardL"
+                                   app:layout_constraintVertical_bias="0" app:layout_constraintVertical_weight="2">
+    <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical"
+                  android:layout_width="match_parent" android:layout_height="match_parent">
+        <ImageView android:layout_width="80dp" android:layout_height="80dp"
+                   android:src="@drawable/ic_assignment_black_24dp"/>
+        <TextView android:textSize="18sp" android:textColor="@color/backgroundWhite" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="چک لیست"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
           package="ir.nilgroup.mountain44">
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission
+            android:name="android.permission.FLASHLIGHT"/> <!-- Permissions : Allows access to change system settings for handling screen states -->
+    <uses-permission
+            android:name="android.permission.WRITE_SETTINGS"
+            tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
+    <uses-feature android:name="android.hardware.location.gps"/>
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -9,15 +20,30 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
-        <activity android:name=".SplashActivity">
+        <activity android:name=".activities.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
+        <meta-data
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyAJvg24sA8ug6VzI_i1t9iNM-tvMwTFwvU"/>
+        <meta-data
+                android:name="com.google.android.gms.version"
+                android:value="@integer/google_play_services_version"/>
+        <activity android:name=".activities.MainActivity">
         </activity>
+        <activity android:name=".fragment.AppFragment"/>
+        <activity android:name=".activities.ChecklistActivity"/>
+        <activity android:name=".activities.CourseActivity"/>
+        <activity android:name=".activities.CourseSing"/>
+        <activity android:name=".activities.LoginActivity"/>
+        <activity android:name=".activities.MessageGroupActivity"/>
+        <activity android:name=".activities.MessageListActivity"/>
+        <activity android:name=".fragment.GroupFragment"/>
+        <activity android:name=".fragment.ProfileFragment"/>
     </application>
 
 </manifest>

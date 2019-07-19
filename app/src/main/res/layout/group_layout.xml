@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:tools="http://schemas.android.com/tools">
+    <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent">
+        <androidx.appcompat.widget.Toolbar
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                app:titleTextColor="@color/backgroundWhite"
+                android:id="@+id/toolbar_group"
+                app:layout_scrollFlags="scroll|enterAlways|snap">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                          android:orientation="horizontal"
+                          android:gravity="center">
+                <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                             android:src="@drawable/ic_arrow_back_black_24dp"
+                             android:id="@+id/backMessageApp"
+                             android:background="@android:color/transparent"
+                             android:layout_gravity="left|center_vertical"
+                             android:layout_marginRight="16dp" tools:ignore="RtlHardcoded"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent"
+                              android:gravity="center"
+                              android:layout_weight="0.25">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                              android:text="دوستان"
+                              android:id="@+id/titleGroup"
+                              android:textSize="18sp"
+                              android:textColor="@color/backgroundWhite"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="match_parent"
+                              android:layout_weight="0.8">
+                    <androidx.appcompat.widget.SearchView android:layout_width="match_parent"
+                                                          android:layout_height="match_parent"
+                                                          android:layoutDirection="rtl"
+                                                          app:searchIcon="@drawable/ic_search_black_24dp"
+                                                          android:isScrollContainer="true"
+                                                          app:showDividers="beginning"
+                                                          android:paddingLeft="10dp"
+                                                          android:layout_margin="10dp" android:id="@+id/searchGroup"
+                                                          app:queryBackground="@drawable/background_search"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layoutDirection="ltr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabTextColor="@color/backgroundWhite"
+                app:tabIndicatorHeight="60dp"
+                android:background="@color/colorPrimary"
+                android:animateLayoutChanges="true"
+                app:tabRippleColor="@color/backgroundWhite"
+                app:tabIndicatorColor="@color/colorYellowBright"
+                app:tabMode="fixed">
+            <com.google.android.material.tabs.TabItem
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:icon="@drawable/ic_notifications_black_24dp"/>
+            <com.google.android.material.tabs.TabItem
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:icon="@drawable/ic_people_black_24dp"/>
+            <com.google.android.material.tabs.TabItem
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:icon="@drawable/ic_today_black_24dp"/>
+            <com.google.android.material.tabs.TabItem
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:icon="@drawable/ic_person_black_24dp"/>
+        </com.google.android.material.tabs.TabLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollViewContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.viewpager.widget.ViewPager android:layout_width="match_parent" android:layout_height="match_parent"
+                                             android:animateLayoutChanges="true"
+                                             android:scrollIndicators="right"
+                                             android:id="@+id/viewpager_group"/>
+    </androidx.core.widget.NestedScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true" app:srcCompat="@android:drawable/ic_input_add"
+            android:id="@+id/floatingActionButton" android:tint="@android:color/white"
+            app:backgroundTint="@color/colorPrimaryDark"
+            android:layout_gravity="bottom|end" android:layout_margin="12dp"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

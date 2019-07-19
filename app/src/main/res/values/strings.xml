@@ -1,3 +1,69 @@
 <resources>
-    <string name="app_name">Mountain44</string>
+    <string name="app_name">کوهنورد</string>
+
+    <string name="nav_setting">تنظیمات</string>
+    <string name="na_aboutUs">درباره ما</string>
+    <string name="tools_draw">ابزار ها</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="sotwFa_north">شمالی</string>
+    <string name="sotwFa_east">شرقی</string>
+    <string name="sotwFa_south">جنوبی</string>
+    <string name="sotwFa_west">غربی</string>
+    <string name="sotwFa_northeast">شمال شرقی</string>
+    <string name="sotwFa_northwest">شمال غربی</string>
+    <string name="sotwFa_southeast">جنوب شرقی</string>
+    <string name="sotwFa_southwest">جنوب غربی</string>
+
+    <string name="sotw_north">N</string>
+    <string name="sotw_east">E</string>
+    <string name="sotw_south">S</string>
+    <string name="sotw_west">W</string>
+    <string name="sotw_northeast">NE</string>
+    <string name="sotw_northwest">NW</string>
+    <string name="sotw_southeast">SE</string>
+    <string name="sotw_southwest">SW</string>
+    <string name="title_activity_weather">WeatherActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
+    <string name="map_api">AIzaSyAJvg24sA8ug6VzIi1t9iNMtvMwTFwvU</string>
+    <string name="weather_api">098135d42c758c6286908437eac2471b</string>
+
+    <string name="icon_clear_sky_day" translatable="false"></string>
+    <string name="icon_clear_sky_night" translatable="false"></string>
+    <string name="icon_few_clouds_day" translatable="false"></string>
+    <string name="icon_few_clouds_night" translatable="false"></string>
+    <string name="icon_scattered_clouds" translatable="false"></string>
+    <string name="icon_broken_clouds" translatable="false"></string>
+    <string name="icon_shower_rain" translatable="false"></string>
+    <string name="icon_rain_day" translatable="false"></string>
+    <string name="icon_rain_night" translatable="false"></string>
+    <string name="icon_thunderstorm" translatable="false"></string>
+    <string name="icon_snow" translatable="false"></string>
+    <string name="icon_mist" translatable="false"></string>
+    <string name="icon_weather_default" translatable="false"></string>
+    <string name="icon_wind" translatable="false"></string>
+    <string name="icon_humidity" translatable="false"></string>
+    <string name="icon_barometer" translatable="false"></string>
+    <string name="icon_cloudiness" translatable="false"></string>
+    <string name="icon_sunrise" translatable="false"></string>
+    <string name="icon_sunset" translatable="false"></string>
+    <string name="error_invalid_password">error invalid password</string>
+    <string name="error_field_required">field required</string>
+    <string name="error_invalid_email">invalid email</string>
+    <string name="ok">بله</string>
+    <string name="cancel">خیر</string>
 </resources>

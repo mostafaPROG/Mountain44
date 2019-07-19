@@ -9,4 +9,15 @@
         <item name="android:fontFamily">@font/iransansweb</item>
     </style>
 
+    <style name="textAppearanceExtended" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/backgroundWhite</item>
+        <item name="android:fontFamily">@font/yekan</item>
+        <item name="android:textSize">42sp</item>
+    </style>
+    <style name="textAppearanceCollapsed" parent="TextAppearance.AppCompat.Title">
+        <item name="android:textColor">@color/backgroundWhite</item>
+        <item name="android:fontFamily">@font/yekan</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
 </resources>
