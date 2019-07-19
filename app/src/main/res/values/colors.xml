@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="backgroundBlue">#02223c</color>
+    <color name="backgroundWhite">#fdfffc</color>
+    <color name="black">#050505</color>
+    <color name="blue">#20cbf3</color>
+    <color name="blue_dark">#d7071146</color>
+    <color name="blue_dark_transparent">#d7071146</color>
+    <color name="colorAccent">#2ec4b6</color>
+    <color name="colorBackground">#241445</color>
+    <color name="colorPrimary">#ff1890a0</color>
+    <color name="colorPrimary2">#fff0e0a0</color>
+    <color name="colorPrimary3">#ff405860</color>
+    <color name="colorPrimary4">#ff78a0a0</color>
+    <color name="colorPrimaryDark">#286878</color>
+    <color name="colorPrimaryDark2">#011627</color>
+    <color name="colorPrimaryLight">#ff80c0c0</color>
+    <color name="colorRed">#e71d36</color>
+    <color name="colorYellow">#f8f805</color>
+    <color name="colorYellowBright">#ff9f1c</color>
+    <color name="colorYellowDark">#ff6d00</color>
+    <color name="darkGray">#353535</color>
+    <color name="gray">#e4949494</color>
+    <color name="green">#49cc56</color>
+    <color name="orange">#fa9301</color>
+    <color name="pink">#ff308e</color>
+    <color name="purple">#6f26fa</color>
+    <color name="separatorColor">#18102c</color>
+    <color name="white">#fff</color>
+    <color name="yellow">#f8d411</color>
 </resources>
