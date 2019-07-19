@@ -13,43 +13,68 @@ import com.google.android.gms.common.GoogleApiAvailability
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import ir.nilgroup.mountain44.R
 
-class MapFragment : AppCompatActivity(),OnMapReadyCallback {
+class MapFragment : AppCompatActivity(), OnMapReadyCallback {
 
     private val Tag = "MapFragment"
     private val ERROR_DIALOG_REQUEST = 9001
     private val LOCATION_PERMISSION_REQUEST_CODE = 1234
     private var mLocationPermissionGranted: Boolean = false
-    private lateinit var mMap:GoogleMap
+    private lateinit var mMap: GoogleMap
+    lateinit var mapStyle: FloatingActionButton
 
     private val FINE = android.Manifest.permission.ACCESS_FINE_LOCATION
     private val COARSE = android.Manifest.permission.ACCESS_COARSE_LOCATION
+    var MAP_TYPE = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.map_layout)
+
+//        mapStyle = findViewById(R.id.mapStyle)
+//        mapStyle.setOnClickListener {
+//            when (MAP_TYPE) {
+//                0 -> {
+//                    mMap.mapType = GoogleMap.MAP_TYPE_NONE
+//                    MAP_TYPE = 1
+//                }
+//                1 -> {
+//                    mMap.mapType = GoogleMap.MAP_TYPE_SATELLITE
+//                    MAP_TYPE = 2
+//                }
+//                2 -> {
+//                    mMap.mapType = GoogleMap.MAP_TYPE_HYBRID
+//                    MAP_TYPE = 3
+//                }
+//                3 -> {
+//                    mMap.mapType = GoogleMap.MAP_TYPE_TERRAIN
+//                    MAP_TYPE = 0
+//                }
+//            }
+//        }
 
         if (isServiceOk()) {
             getLocationPermission()
         }
     }
 
-    fun initMap(){
-        Log.d(Tag,"initMap: initializing map")
-        val fragmentMap:SupportMapFragment=supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
+    fun initMap() {
+        Log.d(Tag, "initMap: initializing map")
+        val fragmentMap: SupportMapFragment = supportFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         fragmentMap.getMapAsync(this)
     }
 
     override fun onMapReady(googleMap: GoogleMap?) {
-      Toast.makeText(this,"map is ready",Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "map is ready", Toast.LENGTH_SHORT).show()
         Log.d(Tag, "onMapReady: map is ready")
-        mMap= googleMap!!
+        mMap = googleMap!!
     }
 
     fun getLocationPermission() {
-        Log.d(Tag,"getLocationPermission: getting location permission")
-        val permission:Array<out String> = arrayOf(
+        Log.d(Tag, "getLocationPermission: getting location permission")
+        val permission: Array<out String> = arrayOf(
             android.Manifest.permission.ACCESS_FINE_LOCATION,
             android.Manifest.permission.ACCESS_COARSE_LOCATION
         )
@@ -67,12 +92,12 @@ class MapFragment : AppCompatActivity(),OnMapReadyCallback {
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
-        Log.d(Tag,"onRequestPermissionsResult: called.")
+        Log.d(Tag, "onRequestPermissionsResult: called.")
         mLocationPermissionGranted = false
         when (requestCode) {
             LOCATION_PERMISSION_REQUEST_CODE -> {
-                if (grantResults.size>0) {
-                    for (i in grantResults.iterator()){
+                if (grantResults.size > 0) {
+                    for (i in grantResults.iterator()) {
                         if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {
                             mLocationPermissionGranted = false
                             println("onRequestPermissionsResult: permission failed")

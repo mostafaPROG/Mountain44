@@ -19,5 +19,9 @@
         <item name="android:fontFamily">@font/yekan</item>
         <item name="android:textSize">18sp</item>
     </style>
-
+    <style name="SearchView">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:hint">جست و جوی قله ها</item>
+    </style>
 </resources>

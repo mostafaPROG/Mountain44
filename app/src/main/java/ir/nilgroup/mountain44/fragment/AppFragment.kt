@@ -9,6 +9,7 @@ import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
+import android.hardware.SensorManager.SENSOR_DELAY_GAME
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
@@ -194,7 +195,7 @@ class AppFragment : AppCompatActivity()
     private fun isNetworkAvailable(): Boolean {
         val connectivityManager: ConnectivityManager =
             getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-        val activeNetworkInfo: NetworkInfo = connectivityManager.activeNetworkInfo
+        val activeNetworkInfo: NetworkInfo? = connectivityManager.activeNetworkInfo
         return (activeNetworkInfo != null && activeNetworkInfo.isConnected)
     }
 
@@ -338,7 +339,7 @@ class AppFragment : AppCompatActivity()
 
     @SuppressLint("SetTextI18n")
     fun initialUi(response: CurrentWeather) {
-        temprateDegree.text = "${response.main!!.temp.toInt() - 273}"
+        temprateDegree.text = "${response.main!!.temp.toInt()}"
         currentCity.text = response.name.toString()
         weatherState.text = response.weather[0].main
         windSpeed.text = response.wind!!.speed.toString()
@@ -356,7 +357,11 @@ class AppFragment : AppCompatActivity()
         Logger.getLogger("Tag").warning("string drawable :  ${this@AppFragment.packageName}")
         Glide.with(this@AppFragment).load(id).into(iconWeather)
 
-        db.weatherDao().insertAll(WeatherResponse().ConvResponse(response))
+        if (db.weatherDao().getAll().isEmpty()) {
+            db.weatherDao().insertAll(WeatherResponse().ConvResponse(response))
+        } else {
+            db.weatherDao().update(WeatherResponse().ConvResponse(response))
+        }
 
     }
 
@@ -443,17 +448,19 @@ class AppFragment : AppCompatActivity()
     }
 
     override fun onResume() {
+        sensorManager.registerListener(this, accelerometer, SENSOR_DELAY_GAME)
+        sensorManager.registerListener(this, magnetometer, SENSOR_DELAY_GAME)
         super.onResume()
     }
 
     override fun onPause() {
-
+        sensorManager.unregisterListener(this, accelerometer)
+        sensorManager.unregisterListener(this, magnetometer)
         super.onPause()
     }
 
     override fun onDestroy() {
         lantern.cleanup()
-
         super.onDestroy()
     }
 

@@ -44,6 +44,7 @@
         <activity android:name=".activities.MessageListActivity"/>
         <activity android:name=".fragment.GroupFragment"/>
         <activity android:name=".fragment.ProfileFragment"/>
+        <activity android:name=".fragment.MapFragment"/>
     </application>
 
 </manifest>

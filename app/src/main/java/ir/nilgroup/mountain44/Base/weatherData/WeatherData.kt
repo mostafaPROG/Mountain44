@@ -1,25 +1,22 @@
 package ir.nilgroup.mountain44.Base.weatherData
 
-import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "weather")
 class WeatherData(
-    @ColumnInfo val all: Double,
-    @ColumnInfo val dt: Long,
-    @ColumnInfo val humidity: Double,
-    @ColumnInfo val icon: String,
+    public val all: Double,
+    public val dt: Long,
+    public val humidity: Double,
+    public val icon: String,
     @PrimaryKey
-    private val id: Long,
-    @ColumnInfo
-    private val lat: Double,
-    @ColumnInfo
-    private val lon: Double,
-    @ColumnInfo val main: String,
-    @ColumnInfo val name: String,
-    @ColumnInfo val pressure: Double,
-    @ColumnInfo val speed: Double,
-    @ColumnInfo val temp: Double,
-    val seaLevel: Double
+    public val id: Long,
+    public val lat: Double,
+    public val lon: Double,
+    public val main: String,
+    public val name: String,
+    public val pressure: Double,
+    public val speed: Double,
+    public val temp: Double,
+    public val seaLevel: Double
 )
