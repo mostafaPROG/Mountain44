@@ -74,6 +74,8 @@ dependencies {
     implementation 'com.rom4ek:arcnavigationview:1.0.3'
     implementation 'com.github.KwabenBerko:OpenWeatherMap-Android-Library:2.0.2'
 
+    implementation 'com.diegodobelo.expandingview:expanding-view:0.9.4'
+
     //Typer animation textview
     implementation "com.hanks:htextview-typer:$htextview_version"
     implementation "com.hanks:htextview-base:$htextview_version"        // base library

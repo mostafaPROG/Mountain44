@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:aapt="http://schemas.android.com/aapt"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:orientation="vertical" android:id="@+id/linearLayout7"
+                                                   android:layout_width="320dp" android:layout_height="wrap_content">
+    <TextView android:textSize="18sp" android:textColor="@color/darkGray" android:id="@+id/textView42"
+              android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+              android:text="اضافه کردن وظیفه" android:layout_marginStart="8dp" android:layout_marginEnd="16dp"
+              app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1"
+              app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+    <EditText android:textSize="16sp" android:textColor="@color/backgroundWhite" android:textColorHint="#e4f0efef"
+              android:gravity="center" android:id="@+id/titleCheck" android:background="@drawable/back_filter_right"
+              android:paddingLeft="16dp" android:paddingRight="16dp" android:layout_width="0dp"
+              android:layout_height="wrap_content" android:layout_marginTop="8dp" android:hint="عنوان" android:ems="10"
+              app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5"
+              app:layout_constraintHorizontal_weight="0.7" app:layout_constraintStart_toEndOf="@+id/spinnerCheck"
+              app:layout_constraintTop_toBottomOf="@+id/textView42"/>
+    <Spinner android:layout_gravity="center" android:id="@+id/spinnerCheck"
+             android:background="@drawable/back_filter_left" android:paddingLeft="8dp" android:paddingRight="8dp"
+             android:layout_width="0dp" android:layout_height="0dp" android:layout_marginEnd="16dp"
+             app:layout_constraintBottom_toBottomOf="@+id/titleCheck"
+             app:layout_constraintEnd_toStartOf="@+id/titleCheck" app:layout_constraintHorizontal_bias="0.5"
+             app:layout_constraintHorizontal_weight="0.3" app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="@+id/titleCheck"/>
+    <TextView android:textSize="14sp" android:textColor="@color/blue_dark" android:id="@+id/cancelCheck"
+              android:background="@android:color/transparent" android:clickable="true"
+              android:layout_width="wrap_content" android:layout_height="wrap_content"
+              android:layout_marginBottom="16dp" android:text="انصراف" android:layout_marginStart="8dp"
+              android:layout_marginEnd="24dp" app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintEnd_toStartOf="@+id/saveChack" app:layout_constraintHorizontal_bias="1"
+              app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@+id/saveChack"
+              app:layout_constraintVertical_bias="0"/>
+    <TextView android:textSize="14sp" android:textColor="@color/blue_dark" android:id="@+id/saveChack"
+              android:background="@color/backgroundWhite" android:clickable="true" android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:layout_marginTop="16dp" android:text="ذخیره"
+              android:layout_marginEnd="32dp" app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/titleCheck"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
