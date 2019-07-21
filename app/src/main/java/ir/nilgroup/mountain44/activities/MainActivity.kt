@@ -108,7 +108,7 @@ class MainActivity : AppCompatActivity() {
         mNavigation.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.checkListDr -> {
-                    startActivity(Intent(this@MainActivity,ChecklistActivity::class.java))
+                    startActivity(Intent(this@MainActivity,CheckList2::class.java))
                     return@setNavigationItemSelectedListener true
                 }
 //                R.id.tools_drw -> {

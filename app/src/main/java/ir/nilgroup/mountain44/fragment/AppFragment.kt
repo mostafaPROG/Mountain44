@@ -36,7 +36,7 @@ import ir.nilgroup.mountain44.Base.Utilities
 import ir.nilgroup.mountain44.Base.weatherData.WeatherDatabase
 import ir.nilgroup.mountain44.Base.weatherData.WeatherResponse
 import ir.nilgroup.mountain44.R
-import ir.nilgroup.mountain44.activities.ChecklistActivity
+import ir.nilgroup.mountain44.activities.CheckList2
 import java.text.SimpleDateFormat
 import java.util.*
 import java.util.logging.Logger
@@ -98,7 +98,7 @@ class AppFragment : AppCompatActivity()
             .build()
 
         findViewById<CardView>(R.id.checkListId).setOnClickListener {
-            startActivity(Intent(this, ChecklistActivity::class.java))
+            startActivity(Intent(this, CheckList2::class.java))
         }
         //    getHeight
         heightGet()

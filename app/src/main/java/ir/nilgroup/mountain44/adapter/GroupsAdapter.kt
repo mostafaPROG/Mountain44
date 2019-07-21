@@ -5,44 +5,74 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.executor.GlideExecutor
+import com.mikhaellopez.circularimageview.CircularImageView
 import ir.nilgroup.mountain44.Base.GroupData
 import ir.nilgroup.mountain44.R
+import ir.nilgroup.mountain44.activities.GroupProfileActivity
 import ir.nilgroup.mountain44.activities.MessageGroupActivity
 
-class GroupsAdapter(val arrayList: ArrayList<GroupData>, val context: Context):RecyclerView.Adapter<GroupsAdapter.ViewHolder>() {
+class GroupsAdapter(val arrayList: ArrayList<GroupData>, val context: Context) :
+    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+
+    val filterType = 0
+    val itemType = 1
+
+    class ItemViewholder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val nameGroup: TextView = itemView.findViewById(R.id.nameCardGroup)
+        val rank: TextView = itemView.findViewById(R.id.rankCardGroup)
+        val member: TextView = itemView.findViewById(R.id.memCardGroup)
+        val image:CircularImageView = itemView.findViewById(R.id.imageGroupCard)
+    }
+
+    class FilterViewholder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val province: Button = itemView.findViewById(R.id.provinceText)
+        val city: Button = itemView.findViewById(R.id.cityText)
+    }
 
 
+    override fun getItemViewType(position: Int): Int {
+        return if (position == 0) {
+            filterType
+        } else
+            itemType
+    }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.group_card, parent, false)
-        val constraintLayout:ConstraintLayout = view.findViewById(R.id.constraintGroupCard)
-        constraintLayout.setOnClickListener {
-            var position = parent.findViewById<RecyclerView>(R.id.recyclerGroup).getChildLayoutPosition(view)
-            val intent = Intent(context.applicationContext, MessageGroupActivity::class.java)
-                .putExtra("nameGroup",arrayList[position].nameId)
-                .putExtra("member",arrayList[position].members)
-            context.startActivity(intent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+
+        if (viewType == filterType) {
+            val view = LayoutInflater.from(parent.context).inflate(R.layout.filter_group_card, parent, false)
+            return FilterViewholder(view)
+        }else{
+            val view = LayoutInflater.from(parent.context).inflate(R.layout.group_card,parent,false)
+            view.findViewById<CircularImageView>(R.id.imageGroupCard).setOnClickListener {
+                context.startActivity(Intent(context,GroupProfileActivity::class.java))
+            }
+            return ItemViewholder(view)
         }
-
-        return ViewHolder(view)
     }
 
-    override fun getItemCount(): Int = arrayList.size
-
-
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.name.text = arrayList[position].nameId
-        holder.member.text = arrayList[position].members
-
+    override fun getItemCount(): Int {
+        return arrayList.size
     }
 
-
-    class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
-        val name:TextView = itemView.findViewById(R.id.nameCardGroup)
-        val member:TextView = itemView.findViewById(R.id.stateCardGroup)
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        if (holder is ItemViewholder){
+            holder.member.text = arrayList[position].members.toString()
+            holder.rank.text=arrayList[position].rank.toString()
+            holder.nameGroup.text=arrayList[position].nameId
+            val stringBuilder = "p${(1..7).random()}"
+            val id = context.resources.getIdentifier(stringBuilder, "drawable", context.packageName)
+            Glide.with(context).load(id).into(holder.image)
+            GlideExecutor.newAnimationExecutor()
+        }
     }
+
 
 }

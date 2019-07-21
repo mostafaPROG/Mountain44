@@ -11,13 +11,13 @@ import ir.nilgroup.mountain44.Base.GroupData
 import ir.nilgroup.mountain44.R
 import ir.nilgroup.mountain44.adapter.GroupsAdapter
 
-class PeopleFragment : Fragment() {
+class TeamFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var adapterGroup: GroupsAdapter
 
     companion object {
-        fun newInstance(): PeopleFragment = PeopleFragment()
+        fun newInstance(): TeamFragment = TeamFragment()
     }
 
 
@@ -25,12 +25,12 @@ class PeopleFragment : Fragment() {
         val view = inflater.inflate(R.layout.group_fragment, container, false)
 
         val list:ArrayList<GroupData> = ArrayList()
-        list.add(GroupData("گروه کوهنوردی 1"))
-        list.add(GroupData("گروه کوهنوردی 2","12"))
-        list.add(GroupData("گروه کوهنوردی 3","3000"))
-        list.add(GroupData("گروه کوهنوردی 4","3"))
-        list.add(GroupData("گروه کوهنوردی 5","78"))
-        list.add(GroupData("گروه کوهنوردی 6","55"))
+        list.add(GroupData("گروه کوهنوردی 1",216,1))
+        list.add(GroupData("گروه کوهنوردی 2",12,2))
+        list.add(GroupData("گروه کوهنوردی 3",13,3))
+        list.add(GroupData("گروه کوهنوردی 4",3,4))
+        list.add(GroupData("گروه کوهنوردی 5",78,6))
+        list.add(GroupData("گروه کوهنوردی 6",55,5))
 
 
         recyclerView = view.findViewById(R.id.recyclerGroup)

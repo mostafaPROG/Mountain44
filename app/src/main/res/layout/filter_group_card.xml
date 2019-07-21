@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical"
+                                   android:layout_width="match_parent" android:layout_height="wrap_content"
+                                   app:cardCornerRadius="0dp"
+                                   android:layout_marginBottom="24dp"
+                                   app:cardBackgroundColor="#12465c">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:layout_height="match_parent">
+        <Button android:gravity="center" android:id="@+id/cityText" android:background="@drawable/back_filter_left"
+                android:layout_width="80dp" android:layout_height="30dp" android:text="شهر"
+                app:layout_constraintBottom_toBottomOf="@+id/provinceText"
+                app:layout_constraintEnd_toStartOf="@+id/provinceText" app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="@+id/provinceText"/>
+        <Button android:gravity="center" android:id="@+id/provinceText" android:background="@drawable/back_filter_right"
+                android:layout_width="80dp" android:layout_height="30dp" android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp" android:text="استان" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/cityText" app:layout_constraintTop_toTopOf="parent"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/doFilterFab"
+                                                                               android:clickable="true"
+                                                                               android:layout_width="wrap_content"
+                                                                               android:layout_height="wrap_content"
+                                                                               android:src="@drawable/ic_search_black_24dp"
+                                                                               android:layout_marginStart="8dp"
+                                                                               android:layout_marginEnd="8dp"
+                                                                               app:layout_constraintBottom_toBottomOf="@+id/cityText"
+                                                                               app:layout_constraintEnd_toStartOf="@+id/provinceText"
+                                                                               app:layout_constraintStart_toEndOf="@+id/cityText"
+                                                                               app:layout_constraintTop_toTopOf="@+id/cityText"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

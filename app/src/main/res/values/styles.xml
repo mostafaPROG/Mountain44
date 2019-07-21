@@ -24,4 +24,7 @@
         <item name="android:textColorHint">@color/gray</item>
         <item name="android:hint">جست و جوی قله ها</item>
     </style>
+    <style name="itemTextApp">
+        <item name="android:fontFamily">@font/yekan</item>
+    </style>
 </resources>

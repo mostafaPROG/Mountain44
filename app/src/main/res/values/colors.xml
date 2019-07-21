@@ -8,13 +8,14 @@
     <color name="blue_dark_transparent">#d7071146</color>
     <color name="colorAccent">#2ec4b6</color>
     <color name="colorBackground">#241445</color>
-    <color name="colorPrimary">#ff1890a0</color>
+    <color name="colorPrimary">#1890A0</color>
     <color name="colorPrimary2">#fff0e0a0</color>
     <color name="colorPrimary3">#ff405860</color>
     <color name="colorPrimary4">#ff78a0a0</color>
     <color name="colorPrimaryDark">#286878</color>
     <color name="colorPrimaryDark2">#011627</color>
     <color name="colorPrimaryLight">#ff80c0c0</color>
+    <color name="colorPrimaryGlass">#9F80C0C0</color>
     <color name="colorRed">#e71d36</color>
     <color name="colorYellow">#f8f805</color>
     <color name="colorYellowBright">#ff9f1c</color>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                   xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent"
+                                   android:layout_height="150dp" android:layout_margin="8dp"
+                                   android:layoutDirection="rtl" app:cardCornerRadius="4dp">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:layout_height="match_parent">
+        <ImageView android:id="@+id/imageGalleryGroup" android:layout_width="0dp" android:layout_height="0dp"
+                   android:foreground="#8b303030" android:scaleType="centerCrop"
+                   app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                   app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+                   app:srcCompat="@drawable/back_header"/>
+        <TextView android:textSize="20sp" android:textColor="@color/backgroundWhite" android:id="@+id/titleGalleryGroup"
+                  android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:layout_marginTop="16dp" android:text="کوه بینالود" android:fontFamily="@font/yekan"
+                  android:layout_marginStart="8dp" app:layout_constraintStart_toStartOf="parent"
+                  app:layout_constraintTop_toTopOf="parent"/>
+        <TextView android:textSize="12sp" android:textColor="#d8fdfffc" android:id="@+id/timeGalleryGroup"
+                  android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:layout_marginBottom="8dp" android:text="23 دقیقه پیش"
+                  android:drawableLeft="@drawable/ic_access_time_black_24dp" android:drawablePadding="2dp"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  app:layout_constraintStart_toStartOf="@+id/titleGalleryGroup"
+                  app:layout_constraintTop_toBottomOf="@+id/titleGalleryGroup" app:layout_constraintVertical_bias="0"/>
+        <TextView android:textSize="12sp" android:textColor="#d8fdfffc" android:id="@+id/numberGalleryGroup"
+                  android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="15"
+                  android:drawableLeft="@drawable/ic_photo_library_black_24dp" android:drawablePadding="2dp"
+                  android:layout_marginStart="4dp" app:layout_constraintBottom_toBottomOf="@+id/timeGalleryGroup"
+                  app:layout_constraintStart_toEndOf="@+id/timeGalleryGroup"
+                  app:layout_constraintTop_toTopOf="@+id/timeGalleryGroup"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

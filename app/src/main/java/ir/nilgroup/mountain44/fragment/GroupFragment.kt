@@ -13,7 +13,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.tabs.TabLayout
 import ir.nilgroup.mountain44.R
 import ir.nilgroup.mountain44.adapter.TabAdapter
-import ir.nilgroup.mountain44.fragment.groupFragments.PeopleFragment
+import ir.nilgroup.mountain44.fragment.groupFragments.TeamFragment
 import ir.nilgroup.mountain44.fragment.groupFragments.PersonFragment
 
 class GroupFragment : AppCompatActivity() {
@@ -23,7 +23,6 @@ class GroupFragment : AppCompatActivity() {
     private lateinit var viewPager: ViewPager
     private lateinit var toolbar: androidx.appcompat.widget.Toolbar
     private lateinit var title: TextView
-    private lateinit var float: FloatingActionButton
     private lateinit var searchView: SearchView
     private lateinit var backMenu: ImageButton
 
@@ -36,14 +35,13 @@ class GroupFragment : AppCompatActivity() {
         viewPager = findViewById(R.id.viewpager_group)
         toolbar = findViewById(R.id.toolbar_group)
         title = findViewById(R.id.titleGroup)
-        float = findViewById(R.id.floatingActionButton)
         searchView = findViewById(R.id.searchGroup)
         backMenu = findViewById(R.id.backMessageApp)
         backMenu.setOnClickListener { onBackPressed() }
 
         tabAdapter = TabAdapter(supportFragmentManager)
         tabAdapter.addFragment(NotificationFragment(), "رویداد ها")
-        tabAdapter.addFragment(PeopleFragment(), "گروه ها")
+        tabAdapter.addFragment(TeamFragment(), "گروه ها")
         tabAdapter.addFragment(PersonFragment(), "چت ها")
 
         val tabIcon: ArrayList<Int> = arrayListOf(
@@ -72,13 +70,7 @@ class GroupFragment : AppCompatActivity() {
 
             @SuppressLint("RestrictedApi")
             override fun onPageSelected(position: Int) {
-                title.text = tabAdapter.getTitle(position)
-                float.visibility = when {
-                    position > 1 -> View.INVISIBLE
-                    else -> {
-                        View.VISIBLE
-                    }
-                }
+
             }
 
         })

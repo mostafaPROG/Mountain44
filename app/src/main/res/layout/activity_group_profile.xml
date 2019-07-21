@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                     xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                     xmlns:aapt="http://schemas.android.com/aapt"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="match_parent">
+    <com.google.android.material.appbar.AppBarLayout android:id="@+id/appbar" android:layout_width="match_parent"
+                                                     android:layout_height="wrap_content" app:elevation="0dp">
+        <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@+id/collapsingToolbarL"
+                                                                    android:background="@color/backgroundWhite"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    app:collapsedTitleGravity="center"
+                                                                    app:collapsedTitleTextAppearance="@style/textAppearanceCollapsed"
+                                                                    app:contentScrim="@color/colorPrimaryLight"
+                                                                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                                                                    app:layout_scrollInterpolator="@android:interpolator/overshoot"
+                                                                    app:title="گروه دماوند"
+                                                                    app:toolbarId="@+id/tools_toolbarL">
+            <androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/rootView"
+                                                               android:layout_width="match_parent"
+                                                               android:layout_height="match_parent">
+                <ImageView android:id="@+id/imageView2" android:drawingCacheQuality="auto" android:layout_width="0dp"
+                           android:layout_height="0dp" android:layout_marginTop="64dp" android:src="@drawable/b_profile"
+                           android:scaleType="fitXY" android:tint="@color/colorPrimaryLight"
+                           app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                           app:layout_constraintHorizontal_bias="0" app:layout_constraintStart_toStartOf="parent"
+                           app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0"/>
+                <com.mikhaellopez.circularimageview.CircularImageView android:id="@+id/circularImageView"
+                                                                      android:drawingCacheQuality="auto"
+                                                                      android:layout_width="100dp"
+                                                                      android:layout_height="100dp"
+                                                                      android:layout_marginTop="8dp"
+                                                                      android:src="@drawable/back_mount2"
+                                                                      android:scaleType="centerCrop"
+                                                                      android:layout_marginStart="8dp"
+                                                                      android:layout_marginEnd="8dp"
+                                                                      app:civ_border_color="#535353"
+                                                                      app:civ_border_width="2dp" app:civ_shadow="true"
+                                                                      app:civ_shadow_color="#838383"
+                                                                      app:civ_shadow_radius="10"
+                                                                      app:layout_constraintEnd_toEndOf="parent"
+                                                                      app:layout_constraintStart_toStartOf="parent"
+                                                                      app:layout_constraintTop_toTopOf="parent"/>
+                <TextView android:textSize="14sp" android:textColor="@color/darkGray" android:id="@+id/textView18"
+                          android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:layout_marginTop="8dp" android:text="تعداد اعضاء" android:layout_marginStart="8dp"
+                          android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="@+id/baselineLayout2"
+                          app:layout_constraintStart_toEndOf="@+id/baselineLayout3"
+                          app:layout_constraintTop_toBottomOf="@+id/baselineLayout2"/>
+                <com.google.android.material.internal.BaselineLayout android:id="@+id/baselineLayout3"
+                                                                     android:background="@color/darkGray"
+                                                                     android:layout_width="1dp"
+                                                                     android:layout_height="0dp"
+                                                                     android:layout_marginTop="8dp"
+                                                                     android:layout_marginBottom="8dp"
+                                                                     android:layout_marginEnd="8dp"
+                                                                     app:layout_constraintBottom_toBottomOf="@+id/stateCardGroup"
+                                                                     app:layout_constraintEnd_toEndOf="@+id/baselineLayout2"
+                                                                     app:layout_constraintStart_toStartOf="@+id/baselineLayout2"
+                                                                     app:layout_constraintTop_toTopOf="@+id/textView18"/>
+                <TextView android:textSize="14sp" android:textColor="@color/darkGray" android:id="@+id/textView23"
+                          android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:text="تعداد رویدادها" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+                          app:layout_constraintBottom_toTopOf="@+id/stateCardGroup"
+                          app:layout_constraintEnd_toStartOf="@+id/baselineLayout3"
+                          app:layout_constraintStart_toStartOf="@+id/baselineLayout2"
+                          app:layout_constraintTop_toTopOf="@+id/textView18"/>
+                <TextView android:textSize="24sp" android:textColor="@color/darkGray"
+                          android:id="@+id/nameCardGroup" android:layout_width="wrap_content"
+                          android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="گروه دماوند"
+                          app:layout_constraintEnd_toEndOf="@+id/circularImageView"
+                          app:layout_constraintStart_toStartOf="@+id/circularImageView"
+                          app:layout_constraintTop_toBottomOf="@+id/circularImageView"/>
+                <com.google.android.material.internal.BaselineLayout android:id="@+id/baselineLayout2"
+                                                                     android:background="#a33f3f3f"
+                                                                     android:layout_width="0dp"
+                                                                     android:layout_height="1dp"
+                                                                     android:layout_marginTop="8dp"
+                                                                     android:layout_marginStart="8dp"
+                                                                     android:layout_marginEnd="8dp"
+                                                                     app:layout_constraintEnd_toEndOf="parent"
+                                                                     app:layout_constraintStart_toEndOf="@+id/circularImageView2"
+                                                                     app:layout_constraintTop_toBottomOf="@+id/nameCardGroup"/>
+                <TextView android:textSize="14sp" android:textColor="@color/backgroundWhite"
+                          android:id="@+id/rankCardGroup" android:layout_width="wrap_content"
+                          android:layout_height="wrap_content" android:text="112"
+                          app:layout_constraintEnd_toEndOf="@+id/textView23"
+                          app:layout_constraintStart_toStartOf="@+id/textView23"
+                          app:layout_constraintTop_toBottomOf="@+id/textView23"/>
+                <com.google.android.material.card.MaterialCardView android:id="@+id/circularImageView2"
+                                                                   android:layout_width="60dp"
+                                                                   android:layout_height="60dp"
+                                                                   android:layout_marginStart="8dp"
+                                                                   app:cardCornerRadius="10dp"
+                                                                   app:layout_constraintBottom_toBottomOf="@+id/baselineLayout2"
+                                                                   app:layout_constraintStart_toStartOf="@+id/imageView2"
+                                                                   app:layout_constraintTop_toTopOf="@+id/baselineLayout2"
+                                                                   app:strokeColor="@color/darkGray"
+                                                                   app:strokeWidth="1dp">
+                    <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+                               android:src="@drawable/back_mount" android:scaleType="centerCrop"/>
+                </com.google.android.material.card.MaterialCardView>
+                <TextView android:textSize="14sp" android:textColor="@color/backgroundWhite"
+                          android:id="@+id/stateCardGroup" android:layout_width="wrap_content"
+                          android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:text="26"
+                          app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="@+id/textView18"
+                          app:layout_constraintStart_toStartOf="@+id/textView18"
+                          app:layout_constraintTop_toBottomOf="@+id/textView18" app:layout_constraintVertical_bias="0"/>
+                <TextView android:textColor="@color/darkGray" android:id="@+id/textView24"
+                          android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="لیدر"
+                          android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="@+id/circularImageView2"
+                          app:layout_constraintStart_toStartOf="@+id/circularImageView2"
+                          app:layout_constraintTop_toBottomOf="@+id/circularImageView2"/>
+                <iammert.com.view.scalinglib.ScalingLayout android:id="@+id/scalingLayout" android:layout_width="56dp"
+                                                           android:layout_height="56dp" android:layout_margin="16dp"
+                                                           android:layout_marginTop="8dp"
+                                                           android:layout_marginBottom="8dp"
+                                                           android:layout_centerInParent="true"
+                                                           android:layout_marginStart="8dp"
+                                                           android:layout_marginEnd="8dp"
+                                                           app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                                                           app:layout_constraintEnd_toEndOf="parent"
+                                                           app:layout_constraintStart_toStartOf="parent"
+                                                           app:layout_constraintTop_toBottomOf="@+id/textView24"
+                                                           app:radiusFactor="1">
+                    <RelativeLayout android:background="@color/colorPrimaryDark" android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                        <ImageView android:id="@+id/fabIcon" android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content" android:src="@drawable/ic_chat_black_24dp"
+                                   android:layout_centerInParent="true"/>
+                        <LinearLayout android:gravity="center" android:orientation="horizontal"
+                                      android:id="@+id/filterLayout" android:paddingLeft="16dp"
+                                      android:paddingRight="16dp" android:visibility="invisible"
+                                      android:layout_width="match_parent" android:layout_height="match_parent"
+                                      android:layout_margin="8dp">
+                            <RelativeLayout android:gravity="center" android:id="@+id/chatLeader"
+                                            android:layout_width="0dp" android:layout_height="wrap_content"
+                                            android:layout_weight="1">
+                                <ImageView android:id="@+id/imageViewWatchNow" android:layout_width="wrap_content"
+                                           android:layout_height="wrap_content"
+                                           android:src="@drawable/ic_person_black_24dp"
+                                           android:layout_centerVertical="true"/>
+                                <TextView android:textSize="18sp" android:textColor="#ffffff" android:gravity="center"
+                                          android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:layout_marginLeft="8dp" android:text="چت با لیدر"
+                                          android:singleLine="true" android:layout_toRightOf="@+id/imageViewWatchNow"
+                                          android:layout_centerVertical="true"/>
+                            </RelativeLayout>
+                            <RelativeLayout android:gravity="center" android:id="@+id/chatGroup"
+                                            android:layout_width="0dp" android:layout_height="wrap_content"
+                                            android:layout_weight="1">
+                                <ImageView android:id="@+id/imageViewWatchLater" android:layout_width="wrap_content"
+                                           android:layout_height="wrap_content"
+                                           android:src="@drawable/ic_people_black_24dp"
+                                           android:layout_centerVertical="true"/>
+                                <TextView android:textSize="18sp" android:textColor="#ffffff" android:gravity="center"
+                                          android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                          android:layout_marginLeft="8dp" android:text="چت در گروه"
+                                          android:singleLine="true" android:layout_toRightOf="@+id/imageViewWatchLater"
+                                          android:layout_centerVertical="true"/>
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </iammert.com.view.scalinglib.ScalingLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.appcompat.widget.Toolbar android:id="@+id/toolbarGroupPro" android:layout_width="match_parent"
+                                               android:layout_height="wrap_content" app:contentInsetStart="0dp"
+                                               app:contentInsetStartWithNavigation="0dp" app:layout_collapseMode="pin"
+                                               app:layout_scrollFlags="snap|enterAlwaysCollapsed" app:titleMargin="0dp">
+                <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                                   android:layout_height="match_parent">
+                    <ImageView android:id="@+id/imageView14" android:layout_width="wrap_content"
+                               android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                               android:layout_marginBottom="8dp" android:src="@drawable/ic_favorite_border_black_24dp"
+                               android:tint="@color/colorRed" android:layout_marginStart="8dp"
+                               android:layout_marginEnd="16dp" app:layout_constraintBottom_toBottomOf="parent"
+                               app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1"
+                               app:layout_constraintStart_toEndOf="@+id/button6" app:layout_constraintTop_toTopOf="parent"/>
+                    <Button android:textSize="12sp" android:textColor="@color/backgroundWhite" android:id="@+id/button6"
+                            android:background="@drawable/background" android:paddingLeft="8dp"
+                            android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="30dp"
+                            android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:text="ثبت نام"
+                            android:drawablePadding="4dp" android:drawableEnd="@drawable/add_24dp"
+                            android:layout_marginStart="16dp" app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:id="@+id/nestedScrollView"
+                                           android:background="@color/colorPrimaryLight"
+                                           android:layout_width="match_parent" android:layout_height="match_parent"
+                                           android:fillViewport="true"
+                                           app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent"
+                      android:layout_height="match_parent">
+            <com.google.android.material.tabs.TabLayout android:layout_gravity="center" android:id="@+id/tabGroupProf"
+                                                        android:background="@color/colorPrimaryLight"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:animateLayoutChanges="true"
+                                                        android:layoutDirection="ltr"
+                                                        app:tabIconTint="@color/backgroundWhite"
+                                                        app:tabIndicatorColor="@color/colorPrimaryDark"
+                                                        app:tabIndicatorHeight="2dp" app:tabMode="fixed"
+                                                        app:tabRippleColor="@color/backgroundWhite"
+                                                        app:tabTextColor="@color/nav_color_profile">
+                <com.google.android.material.tabs.TabItem android:layout_width="wrap_content"
+                                                          android:layout_height="wrap_content" android:text="معرفی"/>
+                <com.google.android.material.tabs.TabItem android:layout_width="wrap_content"
+                                                          android:layout_height="wrap_content" android:text="تقویم"/>
+                <com.google.android.material.tabs.TabItem android:layout_width="wrap_content"
+                                                          android:layout_height="wrap_content" android:text="گالری"/>
+            </com.google.android.material.tabs.TabLayout>
+            <androidx.viewpager.widget.ViewPager android:id="@+id/viewpagerGroupProfile"
+                                                 android:background="@color/backgroundWhite"
+                                                 android:layout_width="match_parent"
+                                                 android:layout_height="match_parent"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
