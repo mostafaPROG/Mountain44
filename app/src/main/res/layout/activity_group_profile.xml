@@ -13,7 +13,7 @@
                                                                     app:collapsedTitleGravity="center"
                                                                     app:collapsedTitleTextAppearance="@style/textAppearanceCollapsed"
                                                                     app:contentScrim="@color/colorPrimaryLight"
-                                                                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                                                                    app:layout_scrollFlags="snap|exitUntilCollapsed|scroll"
                                                                     app:layout_scrollInterpolator="@android:interpolator/overshoot"
                                                                     app:title="گروه دماوند"
                                                                     app:toolbarId="@+id/tools_toolbarL">
@@ -167,7 +167,7 @@
             <androidx.appcompat.widget.Toolbar android:id="@+id/toolbarGroupPro" android:layout_width="match_parent"
                                                android:layout_height="wrap_content" app:contentInsetStart="0dp"
                                                app:contentInsetStartWithNavigation="0dp" app:layout_collapseMode="pin"
-                                               app:layout_scrollFlags="snap|enterAlwaysCollapsed" app:titleMargin="0dp">
+                                               app:layout_scrollFlags="snap|exitUntilCollapsed" app:titleMargin="0dp">
                 <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
                                                                    android:layout_height="match_parent">
                     <ImageView android:id="@+id/imageView14" android:layout_width="wrap_content"
@@ -179,6 +179,7 @@
                                app:layout_constraintStart_toEndOf="@+id/button6" app:layout_constraintTop_toTopOf="parent"/>
                     <Button android:textSize="12sp" android:textColor="@color/backgroundWhite" android:id="@+id/button6"
                             android:background="@drawable/background" android:paddingLeft="8dp"
+                            android:backgroundTint="@color/green"
                             android:paddingRight="8dp" android:layout_width="wrap_content" android:layout_height="30dp"
                             android:layout_marginTop="8dp" android:layout_marginBottom="8dp" android:text="ثبت نام"
                             android:drawablePadding="4dp" android:drawableEnd="@drawable/add_24dp"
@@ -198,14 +199,17 @@
             <com.google.android.material.tabs.TabLayout android:layout_gravity="center" android:id="@+id/tabGroupProf"
                                                         android:background="@color/colorPrimaryLight"
                                                         android:layout_width="match_parent"
-                                                        android:layout_height="wrap_content"
+                                                        android:layout_height="48dp"
                                                         android:animateLayoutChanges="true"
                                                         android:layoutDirection="ltr"
-                                                        app:tabIconTint="@color/backgroundWhite"
+                                                        app:tabIconTint="@color/nav_color_profile"
+                                                        app:tabIndicatorAnimationDuration="200"
+                                                        app:tabIndicatorGravity="center"
+                                                        app:tabIndicator="@drawable/background_login_text"
                                                         app:tabIndicatorColor="@color/colorPrimaryDark"
-                                                        app:tabIndicatorHeight="2dp" app:tabMode="fixed"
+                                                        app:tabIndicatorHeight="40dp" app:tabMode="fixed"
                                                         app:tabRippleColor="@color/backgroundWhite"
-                                                        app:tabTextColor="@color/nav_color_profile">
+                                                        app:tabTextColor="@color/white">
                 <com.google.android.material.tabs.TabItem android:layout_width="wrap_content"
                                                           android:layout_height="wrap_content" android:text="معرفی"/>
                 <com.google.android.material.tabs.TabItem android:layout_width="wrap_content"

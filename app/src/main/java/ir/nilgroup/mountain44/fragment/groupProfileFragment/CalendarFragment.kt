@@ -1,4 +1,4 @@
-package com.example.project1.fragment.groupFragments
+package ir.nilgroup.mountain44.fragment.groupProfileFragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -14,5 +14,5 @@ class CalendarFragment : Fragment() {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
-        inflater.inflate(R.layout.notification_layout, container, false)
+        inflater.inflate(R.layout.calender_fragment, container, false)
 }

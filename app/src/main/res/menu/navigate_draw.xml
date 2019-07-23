@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <!--<item android:id="@+id/tools_drw" android:title="@string/tools_draw" android:checkableBehavior="single" android:icon="@drawable/ic_apps_black_24dp"/>-->
+    <item android:id="@+id/loginDr" android:title="ورود به نرم افزار" android:icon="@drawable/ic_person_black_24dp"/>
+    <item android:id="@+id/addGroup" android:title="اضافه کردن گروه +" android:icon="@drawable/ic_group_add_black_24dp"/>
+    <item android:id="@+id/profileDr" android:title="پروفایل من" android:icon="@drawable/ic_person_pin_black_24dp"/>
+    <item android:id="@+id/groupDr" android:title="گروه ها" android:icon="@drawable/ic_people_black_24dp"/>
     <item android:id="@+id/checkListDr" android:title="چک لیست" android:icon="@drawable/ic_assignment_black_24dp"/>
+    <item android:id="@+id/toolsDr" android:icon="@drawable/ic_apps_black_24dp" android:title="ابزار ها"/>
+    <item android:id="@+id/mapDr" android:title="نقشه گردی" android:icon="@drawable/ic_map_black_24dp"/>
+    <item android:id="@+id/storeDr" android:icon="@drawable/ic_store_black_24dp" android:title="فروشگاه"/>
+    <!--<item android:id="@+id/tools_drw" android:title="@string/tools_draw" android:checkableBehavior="single" android:icon="@drawable/ic_apps_black_24dp"/>-->
+    <item android:id="@+id/helpDr" android:title="راهنما" android:icon="@drawable/ic_info_outline_black_24dp"/>
     <item android:id="@+id/aboutUs"
           android:title="@string/na_aboutUs" android:icon="@drawable/ic_info_outline_black_24dp"/>
     <item android:id="@+id/setting" android:title="@string/nav_setting"

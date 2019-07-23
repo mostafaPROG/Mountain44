@@ -1,4 +1,4 @@
-package ir.nilgroup.mountain44.Base.weatherData
+package ir.nilgroup.mountain44.base.weatherData
 
 import androidx.room.*
 import org.jetbrains.annotations.NotNull

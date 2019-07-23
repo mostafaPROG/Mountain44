@@ -188,8 +188,8 @@
                                                     app:arc_width="50dp"
                                                     app:itemBackground="@android:color/transparent"
                                                     app:headerLayout="@layout/header_draw"
-                                                    app:itemIconTint="@color/darkGray"
+                                                    app:itemIconTint="@color/colorPrimaryDark2"
                                                     app:itemTextAppearance="@style/itemTextApp"
-                                                    app:itemTextColor="@color/colorPrimary2"
+                                                    app:itemTextColor="@color/white"
                                                     app:menu="@menu/navigate_draw"/>
 </androidx.drawerlayout.widget.DrawerLayout>

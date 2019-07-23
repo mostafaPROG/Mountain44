@@ -2,14 +2,12 @@ package ir.nilgroup.mountain44.fragment
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.view.View
 import android.widget.ImageButton
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.viewpager.widget.ViewPager
-import com.example.project1.fragment.groupFragments.NotificationFragment
-import com.google.android.material.floatingactionbutton.FloatingActionButton
+import ir.nilgroup.mountain44.fragment.groupFragments.NotificationFragment
 import com.google.android.material.tabs.TabLayout
 import ir.nilgroup.mountain44.R
 import ir.nilgroup.mountain44.adapter.TabAdapter

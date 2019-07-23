@@ -32,7 +32,7 @@
             android:src="@drawable/ic_delete"/>
     <CheckBox
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:id="@+id/checkBox"
+            android:layout_height="wrap_content" android:id="@+id/checkedSubItem"
             android:layout_toStartOf="@+id/remove_sub_item" android:layout_marginEnd="8dp"
             android:layout_alignBottom="@+id/remove_sub_item" android:layout_alignTop="@+id/remove_sub_item"
             android:layout_centerVertical="true"/>

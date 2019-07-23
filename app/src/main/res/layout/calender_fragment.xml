@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                                       xmlns:app="http://schemas.android.com/apk/res-auto"
+                                       xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent"
+                                       android:layout_height="match_parent" android:fillViewport="true">
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+        <CalendarView android:id="@+id/calendarView" android:layout_width="match_parent"
+                      android:layout_height="wrap_content"/>
+        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="100dp">
+            <com.google.android.material.internal.BaselineLayout android:background="@color/gray"
+                                                                 android:layout_width="match_parent"
+                                                                 android:layout_height="0.6dp"
+                                                                 android:layout_marginBottom="8dp" android:alpha="0.4"
+                                                                 android:layout_marginStart="8dp"
+                                                                 android:layout_marginEnd="8dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                               android:layout_height="match_parent">
+                <TextView android:textSize="18sp" android:textColor="@color/colorPrimaryDark"
+                          android:layout_gravity="right" android:id="@+id/textView4" android:layout_width="wrap_content"
+                          android:layout_height="wrap_content" android:layout_marginBottom="8dp"
+                          android:text="رویداد ها" android:fontFamily="@font/iransansweb_bold"
+                          android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+                          app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                          app:layout_constraintHorizontal_bias="0.976" app:layout_constraintStart_toStartOf="parent"
+                          app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.246"/>
+                <androidx.cardview.widget.CardView android:id="@+id/cardView" android:clipToPadding="false"
+                                                   android:layout_width="match_parent" android:layout_height="40dp"
+                                                   android:layout_marginTop="8dp" android:layout_marginStart="8dp"
+                                                   android:layout_marginEnd="8dp"
+                                                   app:cardBackgroundColor="@color/colorAccent"
+                                                   app:cardCornerRadius="5dp" app:layout_constraintBottom_toBottomOf="parent"
+                                                   app:layout_constraintEnd_toEndOf="parent"
+                                                   app:layout_constraintStart_toStartOf="parent"
+                                                   app:layout_constraintTop_toBottomOf="@+id/textView4">
+                    <LinearLayout android:gravity="center" android:layout_width="match_parent"
+                                  android:layout_height="match_parent">
+                        <TextView android:textColor="#5f5f5f" android:gravity="end" android:id="@+id/textView6"
+                                  android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                  android:layout_marginLeft="8dp" android:text="بیشتر" android:layout_weight="1"/>
+                        <TextView android:textColor="@color/black" android:id="@+id/textView5"
+                                  android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                  android:layout_marginRight="10dp" android:text="تور صعود به قله بینالود"
+                                  android:layout_weight="1"/>
+                        <ImageView android:id="@+id/imageView4" android:layout_width="wrap_content"
+                                   android:layout_height="wrap_content"
+                                   android:src="@drawable/ic_info_outline_black_24dp" android:layout_weight="0.1"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

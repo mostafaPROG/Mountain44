@@ -1,4 +1,4 @@
-package com.example.project1.fragment.groupFragments
+package ir.nilgroup.mountain44.fragment.groupFragments
 
 import android.os.Bundle
 import android.view.LayoutInflater

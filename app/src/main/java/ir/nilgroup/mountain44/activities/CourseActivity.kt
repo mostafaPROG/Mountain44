@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import ir.nilgroup.mountain44.Base.Course
-import ir.nilgroup.mountain44.Base.EndlessRecyclerOnScrollListener
+import ir.nilgroup.mountain44.base.Course
+import ir.nilgroup.mountain44.base.EndlessRecyclerOnScrollListener
 import ir.nilgroup.mountain44.R
 import ir.nilgroup.mountain44.adapter.CourseAdapter
 

@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import ir.nilgroup.mountain44.Base.PersonData
+import ir.nilgroup.mountain44.base.PersonData
 import ir.nilgroup.mountain44.R
 import ir.nilgroup.mountain44.adapter.PersonAdapter
 

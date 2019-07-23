@@ -8,8 +8,8 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import ir.nilgroup.mountain44.Base.MessageData
-import ir.nilgroup.mountain44.Base.SenderState
+import ir.nilgroup.mountain44.base.MessageData
+import ir.nilgroup.mountain44.base.SenderState
 import ir.nilgroup.mountain44.R
 import ir.nilgroup.mountain44.adapter.MessageAdapter
 import java.util.*

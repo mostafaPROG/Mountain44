@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import ir.nilgroup.mountain44.Base.MessageData
+import ir.nilgroup.mountain44.base.MessageData
 import ir.nilgroup.mountain44.R
 
 class MessageAdapter(private var arrayList: ArrayList<MessageData>? = null, val context: Context) :

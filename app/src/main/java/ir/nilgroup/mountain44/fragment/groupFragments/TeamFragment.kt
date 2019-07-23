@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import ir.nilgroup.mountain44.Base.GroupData
+import ir.nilgroup.mountain44.base.GroupData
 import ir.nilgroup.mountain44.R
 import ir.nilgroup.mountain44.adapter.GroupsAdapter
 

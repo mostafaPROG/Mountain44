@@ -32,9 +32,9 @@ import com.kwabenaberko.openweathermaplib.implementation.OpenWeatherMapHelper
 import com.kwabenaberko.openweathermaplib.implementation.callbacks.CurrentWeatherCallback
 import com.kwabenaberko.openweathermaplib.models.currentweather.CurrentWeather
 import github.nisrulz.lantern.Lantern
-import ir.nilgroup.mountain44.Base.Utilities
-import ir.nilgroup.mountain44.Base.weatherData.WeatherDatabase
-import ir.nilgroup.mountain44.Base.weatherData.WeatherResponse
+import ir.nilgroup.mountain44.base.Utilities
+import ir.nilgroup.mountain44.base.weatherData.WeatherDatabase
+import ir.nilgroup.mountain44.base.weatherData.WeatherResponse
 import ir.nilgroup.mountain44.R
 import ir.nilgroup.mountain44.activities.CheckList2
 import java.text.SimpleDateFormat

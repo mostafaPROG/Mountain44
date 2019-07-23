@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
-import ir.nilgroup.mountain44.Base.PersonData
+import ir.nilgroup.mountain44.base.PersonData
 import ir.nilgroup.mountain44.R
 import ir.nilgroup.mountain44.activities.MessageListActivity
 

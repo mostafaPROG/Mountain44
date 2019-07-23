@@ -11,7 +11,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.executor.GlideExecutor
-import ir.nilgroup.mountain44.Base.Course
+import ir.nilgroup.mountain44.base.Course
 import ir.nilgroup.mountain44.R
 import ir.nilgroup.mountain44.activities.CourseSing
 
