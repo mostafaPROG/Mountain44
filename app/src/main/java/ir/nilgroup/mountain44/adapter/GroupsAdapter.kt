@@ -22,10 +22,10 @@ class GroupsAdapter(val arrayList: ArrayList<GroupData>, val context: Context) :
     val itemType = 1
 
     class ItemViewholder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val nameGroup: TextView = itemView.findViewById(R.id.nameCardGroup)
-        val rank: TextView = itemView.findViewById(R.id.rankCardGroup)
-        val member: TextView = itemView.findViewById(R.id.memCardGroup)
-        val image:CircularImageView = itemView.findViewById(R.id.imageGroupCard)
+        val nameGroup: TextView = itemView.findViewById(R.id.nameCardGroupFav)
+        val rank: TextView = itemView.findViewById(R.id.rankCardGroupFav)
+        val member: TextView = itemView.findViewById(R.id.memCardGroupFav)
+        val image:CircularImageView = itemView.findViewById(R.id.imageGroupCardFav)
     }
 
     class FilterViewholder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -47,8 +47,8 @@ class GroupsAdapter(val arrayList: ArrayList<GroupData>, val context: Context) :
             val view = LayoutInflater.from(parent.context).inflate(R.layout.filter_group_card, parent, false)
             return FilterViewholder(view)
         }else{
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.group_card,parent,false)
-            view.findViewById<CircularImageView>(R.id.imageGroupCard).setOnClickListener {
+            val view = LayoutInflater.from(parent.context).inflate(R.layout.group_card_fav,parent,false)
+            view.findViewById<CircularImageView>(R.id.imageGroupCardFav).setOnClickListener {
                 context.startActivity(Intent(context,GroupProfileActivity::class.java))
             }
             return ItemViewholder(view)
@@ -64,7 +64,7 @@ class GroupsAdapter(val arrayList: ArrayList<GroupData>, val context: Context) :
             holder.member.text = arrayList[position].members.toString()
             holder.rank.text=arrayList[position].rank.toString()
             holder.nameGroup.text=arrayList[position].nameId
-            val stringBuilder = "p${(1..7).random()}"
+            val stringBuilder = "logo1"
             val id = context.resources.getIdentifier(stringBuilder, "drawable", context.packageName)
             Glide.with(context).load(id).into(holder.image)
             GlideExecutor.newAnimationExecutor()

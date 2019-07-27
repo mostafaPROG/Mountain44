@@ -51,7 +51,13 @@
         <activity android:name=".activities.MessageGroupActivity"/>
         <activity android:name=".activities.MessageListActivity"/>
         <activity android:name=".fragment.GroupFragment"/>
-        <activity android:name=".fragment.ProfileFragment"/>
+        <activity android:name=".fragment.ProfileFragment">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
         <activity android:name=".fragment.MapFragment"/>
     </application>
 

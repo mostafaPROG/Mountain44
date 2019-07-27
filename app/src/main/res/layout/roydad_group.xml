@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.tabs.TabLayout
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorHeight="50dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/tabLayoutEvent" app:tabTextColor="@color/white"
+            app:tabBackground="@color/colorPrimaryDark"
+            app:tabSelectedTextColor="@color/colorPrimary2"
+            app:tabIndicatorColor="@color/white"
+            app:tabPadding="4dp"
+            app:tabIndicatorGravity="center" style="@style/itemTextApp" android:layoutDirection="rtl">
+
+        <com.google.android.material.tabs.TabItem
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="پیش رو"/>
+
+        <com.google.android.material.tabs.TabItem
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="درحال اجرا"/>
+
+        <com.google.android.material.tabs.TabItem
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="اتمام شده"/>
+    </com.google.android.material.tabs.TabLayout>
+    <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayoutEvent" android:id="@+id/frameEvent"
+            app:layout_constraintVertical_bias="0.0">
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,7 +14,7 @@ class CourseSing : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cours_sing)
 
-        val string = intent.getStringExtra("description").toString()
+        val string = intent.getStringExtra("state").toString()
         val pic = intent.getIntExtra("pic", 1)
         val titlePage = intent.getStringExtra("title")
         findViewById<TextView>(R.id.descriptionCourseActivity).text = string

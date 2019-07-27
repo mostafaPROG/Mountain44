@@ -63,7 +63,7 @@ class GroupFragment : AppCompatActivity() {
             override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
 //                higLightCurrentTab(position)
                 tabLayout.animation = null
-
+                title.text = tabAdapter.getTitle(position)
             }
 
             @SuppressLint("RestrictedApi")

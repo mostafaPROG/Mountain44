@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        android:layout_margin="8dp" android:layout_height="180dp">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1">
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" android:src="@drawable/kooh2"
+                    android:id="@+id/imageView6" android:layout_weight="1" android:scaleType="centerCrop"/>
+        </LinearLayout>
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" android:layout_weight="1" android:padding="5dp"
+                android:gravity="center">
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView9"
+                    android:text="کوه کلک چال، یخچال پربرف تهران" android:textColor="@color/black"
+                    android:fontFamily="@font/iransansweb_bold"/>
+            <TextView
+                    android:text="کوه کلک چال یکی از کوه‌های شمال تهران است که از سه مسیر بوستان جمشیدیه، گلاب‌دره و دره وزباد، قابل دسترسی می‌باشد. مرتفع‌ترین نقطه کوه کلک چال قله کلک‌چال نام دارد که ارتفاع آن ۳۳۵۰ متر از سطح دریا است."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/textView13" android:textSize="12sp"
+                    android:ellipsize="end" android:ems="10" android:maxLines="5"
+                    android:layout_gravity="center_vertical|end"
+                    android:gravity="right" android:foregroundGravity="fill" android:layout_marginTop="8dp"
+                    android:fontFamily="@font/iransansweb_light"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

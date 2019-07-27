@@ -1,6 +1,7 @@
 package ir.nilgroup.mountain44.activities
 
 import android.content.res.ColorStateList
+import android.graphics.Paint
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -69,8 +70,8 @@ class CheckList2 : AppCompatActivity() {
     private fun initChecklist() {
 
         val listTitr: List<TitrData> = db.titrDao().getAllTitr()
-        if (listTitr.isNotEmpty()){
-            for (index in listTitr.indices-1) {
+        if (listTitr.isNotEmpty()) {
+            for (index in listTitr.indices - 1) {
                 val id2 = listTitr[index].titrId
                 val listSub = db.subtitrDao().getSubtitrByParentId(id2)
                 val arrSt: Array<String> = Array(listSub.size) { i ->
@@ -81,8 +82,9 @@ class CheckList2 : AppCompatActivity() {
                     arrSt,
                     listTitr[index].color,
                     R.drawable.ic_notifications_black_24dp
-                ,init = true
-                ,checked = listSub[index].checked)
+                    , init = true
+                    , checked = listSub[index].checked
+                )
             }
         }
     }
@@ -127,8 +129,9 @@ class CheckList2 : AppCompatActivity() {
                 dialogView.findViewById<TextView>(R.id.titleCheck).text.toString(),
                 arrayOf(),
                 colorDrawable[position], R.drawable.ic_notifications_black_24dp
-            ,init = false
-            ,checked = false)
+                , init = false
+                , checked = false
+            )
             mDialogItem.dismiss()
         }
         dialogView.findViewById<TextView>(R.id.cancelCheck).setOnClickListener {
@@ -137,10 +140,17 @@ class CheckList2 : AppCompatActivity() {
 
     }
 
-    private fun addItem(title: String, subItems: Array<String>, colorRes: Int, iconRes: Int,init:Boolean,checked:Boolean) {
+    private fun addItem(
+        title: String,
+        subItems: Array<String>,
+        colorRes: Int,
+        iconRes: Int,
+        init: Boolean,
+        checked: Boolean
+    ) {
         //Let's create an item with R.layout.expanding_layout
         val item: ExpandingItem = mExpandingList.createNewItem(R.layout.expanding_layout)
-        if (!init){
+        if (!init) {
             db.titrDao().insert(
                 TitrData(
                     title = title,
@@ -164,13 +174,13 @@ class CheckList2 : AppCompatActivity() {
                 val view = item!!.getSubItemView(i)
 
                 //Let's set some values in
-                configureSubItem(item, view, subItems[i],init,checked)
+                configureSubItem(item, view, subItems[i], init, checked)
             }
             item.findViewById<ImageView>(R.id.add_more_sub_items).setOnClickListener {
                 showInsertDialog(object : OnItemCreated {
                     override fun itemCreated(title: String) {
                         val newSubItem = item!!.createSubItem()
-                        configureSubItem(item, newSubItem!!, title,init,checked)
+                        configureSubItem(item, newSubItem!!, title, init, checked)
                     }
                 })
             }
@@ -182,10 +192,20 @@ class CheckList2 : AppCompatActivity() {
         }
     }
 
-    private fun configureSubItem(item: ExpandingItem?, view: View, subTitle: String,init: Boolean,checked: Boolean) {
+    private fun configureSubItem(item: ExpandingItem?, view: View, subTitle: String, init: Boolean, checked: Boolean) {
         (view.findViewById(R.id.sub_title) as TextView).text = subTitle
+        (view.findViewById(R.id.checkedSubItem) as CheckBox).isChecked = checked
+        if (checked) {
+            (view.findViewById(R.id.sub_title) as TextView).paintFlags =
+                (view.findViewById(R.id.sub_title) as TextView).paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+            (view.findViewById(R.id.sub_title) as TextView).setTextColor(resources.getColor(R.color.gray))
+        } else {
+            (view.findViewById(R.id.sub_title) as TextView).paintFlags =
+                (view.findViewById(R.id.sub_title) as TextView).paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
+            (view.findViewById(R.id.sub_title) as TextView).setTextColor(resources.getColor(R.color.darkGray))
+        }
         val id = db.titrDao().getIdByViewId(item!!.id)
-        if (!init){
+        if (!init) {
             db.subtitrDao().insert(
                 SubtitrData(
                     0,
@@ -195,10 +215,20 @@ class CheckList2 : AppCompatActivity() {
                 )
             )
         }
+
         view.findViewById<ImageView>(R.id.remove_sub_item).setOnClickListener { item!!.removeSubItem(view) }
         view.findViewById<CheckBox>(R.id.checkedSubItem).setOnCheckedChangeListener { button, b ->
             db.subtitrDao().updateSubtitr(pId = id, check = b)
-            button.isChecked = !b
+            println("***     $b   pid$id")
+            if (b) {
+                (view.findViewById(R.id.sub_title) as TextView).paintFlags =
+                    (view.findViewById(R.id.sub_title) as TextView).paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+                (view.findViewById(R.id.sub_title) as TextView).setTextColor(resources.getColor(R.color.gray))
+            } else {
+                (view.findViewById(R.id.sub_title) as TextView).paintFlags =
+                    (view.findViewById(R.id.sub_title) as TextView).paintFlags and Paint.STRIKE_THRU_TEXT_FLAG.inv()
+                (view.findViewById(R.id.sub_title) as TextView).setTextColor(resources.getColor(R.color.darkGray))
+            }
         }
     }
 

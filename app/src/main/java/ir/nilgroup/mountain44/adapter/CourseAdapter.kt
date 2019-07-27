@@ -46,7 +46,7 @@ class CourseAdapter(private val course: List<Course>, private val context: Conte
             image.setOnClickListener {
                 var position = parent.findViewById<RecyclerView>(R.id.recyclerCourse).getChildLayoutPosition(view)
                 val intent = Intent(context, CourseSing::class.java)
-                    .putExtra("description", course[position].description)
+                    .putExtra("state", course[position].description)
                     .putExtra("pic", (1..7).random())
                     .putExtra("title",course[position].title)
                 context.startActivity(intent)

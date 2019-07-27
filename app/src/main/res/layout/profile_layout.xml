@@ -1,283 +1,299 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="wrap_content"
-            android:fillViewport="true">
-    <androidx.constraintlayout.widget.ConstraintLayout
-            android:orientation="vertical"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:background="#E2E2E2">
-        <androidx.appcompat.widget.Toolbar
-                android:layout_width="match_parent"
-                android:layout_height="250dp"
-                android:theme="?attr/actionBarTheme"
-                android:background="@drawable/back_header"
-                android:minHeight="?attr/actionBarSize" android:id="@+id/toolbarProfile"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintTop_toTopOf="parent" app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
-                android:isScrollContainer="false"/>
-
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
         <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="16dp" app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintHorizontal_bias="0.0" app:layout_constraintVertical_bias="0.47000003"
-                android:id="@+id/layout_constraint" android:layout_marginTop="180dp">
-
+                android:layout_width="match_parent"
+                android:layout_marginBottom="60dp"
+                android:layout_height="match_parent" android:background="@android:color/transparent">
+            <ImageView android:layout_width="match_parent" android:layout_height="450dp"
+                       app:layout_constraintTop_toTopOf="parent"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       android:src="@color/colorPrimary"/>
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_arrow_back_black_24dp"
+                    android:id="@+id/imageButton" android:background="@android:color/transparent"
+                    android:layout_marginStart="16dp"
+                    app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="16dp"/>
             <androidx.cardview.widget.CardView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" app:cardCornerRadius="5dp"
-                    app:cardBackgroundColor="@android:color/white"
-                    app:cardElevation="5dp">
-                <LinearLayout
-                        android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cardView2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp" android:layout_marginTop="80dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textView" app:layout_constraintTop_toTopOf="parent"
+                    app:cardCornerRadius="8dp" app:cardElevation="4dp">
+                <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
-                    <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center" android:layout_marginTop="10dp">
-                        <TextView
-                                android:text="مصطفی"
-                                android:layout_width="0dp"
-                                android:layout_weight="0.6"
-                                android:gravity="right"
-                                android:layout_marginLeft="16dp"
-                                android:layout_marginBottom="4dp" android:layout_marginRight="8dp"
-                                android:layout_height="30dp" android:id="@+id/nameProfile"
-                                android:textSize="18sp"
-                                android:textColor="@color/black"
-                                android:textDirection="ltr"
-                                android:drawableRight="@drawable/ic_person_black_24dp"
-                                android:drawablePadding="4dp"
-                                android:drawableTint="@color/colorPrimaryDark"/>
-                        <androidx.legacy.widget.Space android:layout_width="0dp"
-                                                      android:layout_weight="0.4"
-                                                      android:layout_height="match_parent"/>
-                    </LinearLayout>
-                    <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" android:layout_gravity="center_vertical">
-                        <TextView
-                                android:text="09152442925"
-                                android:layout_width="0dp"
-                                android:layout_height="30dp" android:id="@+id/nameProfile2"
-                                android:layout_marginLeft="16dp"
-                                android:layout_marginBottom="4dp" android:layout_marginRight="8dp"
-                                android:textSize="18sp"
-                                android:textColor="@color/gray" android:focusable="true"
-                                android:gravity="right"
-                                android:drawableRight="@drawable/ic_phone_black_24dp"
-                                android:drawablePadding="4dp"
-                                android:drawableTint="@color/colorPrimaryDark" android:layout_weight="0.6"/>
-                        <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="0dp"
-                                android:layout_height="match_parent" android:layout_weight="0.4"
-                                android:gravity="center">
-                            <Button
-                                    android:layout_width="80dp"
-                                    android:layout_height="30dp" android:id="@+id/button"
-                                    tools:layout_editor_absoluteY="140dp"
-                                    tools:layout_editor_absoluteX="198dp" android:text="ویرایش عکس"
-                                    android:textColor="@android:color/white"
-                                    android:background="@drawable/background_strok" android:textSize="12sp"
-                            />
-                        </LinearLayout>
-                    </LinearLayout>
-                    <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_gravity="center">
-                        <TextView
-                                android:text="\@mostafa40"
-                                android:layout_width="0dp"
-                                android:layout_height="30dp" android:id="@+id/nameProfile3"
-                                android:layout_marginLeft="16dp"
-                                android:layout_marginBottom="4dp" android:layout_marginRight="8dp"
-                                android:textSize="18sp"
-                                android:textColor="@color/gray" android:focusable="true"
-                                android:textDirection="ltr" android:gravity="right|center_vertical"
-                                android:drawableRight="@drawable/ic_person_pin_black_24dp"
-                                android:drawablePadding="4dp"
-                                android:drawableTint="@color/colorPrimaryDark" android:layout_weight="0.6"/>
-                        <androidx.legacy.widget.Space android:layout_width="0dp"
-                                                      android:layout_weight="0.4"
-                                                      android:layout_height="match_parent"/>
-                    </LinearLayout>
-                    <com.google.android.material.internal.BaselineLayout android:layout_width="match_parent"
-                                                                         android:layout_height="0.6dp"
-                                                                         android:alpha="0.4"
-                                                                         android:background="@color/gray"/>
-                    <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="70dp">
-                        <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="0dp"
-                                android:layout_weight="0.3"
-                                android:gravity="center"
-                                android:layout_height="match_parent">
-                            <TextView
-                                    android:text="پست"
-                                    android:textColor="@color/gray"
-                                    android:layout_width="wrap_content"
-                                    android:textSize="12sp"
-                                    android:layout_height="wrap_content"/>
-                            <TextView
-                                    android:text="152"
-                                    android:layout_width="wrap_content"
-                                    android:textColor="@color/black"
-                                    android:textSize="16sp"
-                                    android:layout_height="wrap_content" android:id="@+id/postCount"/>
-                        </LinearLayout>
-                        <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="0dp"
-                                android:layout_weight="0.3"
-                                android:gravity="center"
-                                android:layout_height="match_parent">
-                            <TextView
-                                    android:text="دنبال کننده ها"
-                                    android:textColor="@color/gray"
-                                    android:layout_width="wrap_content"
-                                    android:textSize="12sp"
-                                    android:layout_height="wrap_content"/>
-                            <TextView
-                                    android:text="49"
-                                    android:layout_width="wrap_content"
-                                    android:textColor="@color/black"
-                                    android:textSize="16sp"
-                                    android:layout_height="wrap_content" android:id="@+id/followerCount"/>
-                        </LinearLayout>
-                        <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="0dp"
-                                android:layout_weight="0.3"
-                                android:gravity="center"
-                                android:layout_height="match_parent">
-                            <TextView
-                                    android:text="دنبال شونده ها"
-                                    android:textColor="@color/gray"
-                                    android:layout_width="wrap_content"
-                                    android:textSize="12sp"
-                                    android:layout_height="wrap_content"/>
-                            <TextView
-                                    android:text="80"
-                                    android:layout_width="wrap_content"
-                                    android:textColor="@color/black"
-                                    android:textSize="16sp"
-                                    android:layout_height="wrap_content" android:id="@+id/followingCount"/>
-                        </LinearLayout>
-                    </LinearLayout>
-                    <com.google.android.material.internal.BaselineLayout android:layout_width="match_parent"
-                                                                         android:layout_height="0.6dp"
 
-                                                                         android:alpha="0.4"
-                                                                         android:background="@color/gray"/>
-                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-                              android:text="تصاویر"
-                              android:textSize="18sp"
-                              android:textColor="@color/black"
-                              android:layout_marginBottom="4dp"
-                              android:layout_marginLeft="16dp"
-                              android:layout_marginTop="20dp" android:layout_marginRight="16dp"/>
-                    <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_marginBottom="16dp"
-                            android:layout_height="wrap_content">
-                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                                      android:layout_marginRight="20dp"
-                                      android:layout_marginLeft="20dp"
-                                      android:orientation="horizontal">
-                            <ImageView android:layout_width="0dp" android:layout_height="100dp"
-                                       android:layout_weight="0.3"
-                                       android:src="@drawable/tempgallery"/>
-                            <ImageView android:layout_width="0dp" android:layout_height="100dp"
-                                       android:layout_weight="0.3"
-                                       android:src="@drawable/tempgallery"
-                                       android:layout_marginLeft="4dp" android:layout_marginRight="4dp"/>
-                            <ImageView android:layout_width="0dp" android:layout_height="100dp"
-                                       android:layout_weight="0.3"
-                                       android:src="@drawable/tempgallery"/>
-                        </LinearLayout>
+                    <TextView
+                            android:text="مصطفی قربانزاده"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView2"
+                            android:layout_marginTop="43dp"
+                            android:fontFamily="@font/iransansweb_medium"
+                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginEnd="8dp" app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginStart="8dp"
+                            android:textColor="@color/darkGray" android:textSize="18sp"/>
+                    <TextView
+                            android:text="+۹۸۹۱۵۲۴۴۲۹۲۵"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView3" android:layout_marginTop="8dp"
+                            app:layout_constraintTop_toBottomOf="@+id/textView2"
+                            app:layout_constraintEnd_toEndOf="@+id/textView2"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="@+id/textView2" android:textColor="@color/gray"/>
+                    <TextView
+                            android:text="شماره تماس"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView7"
+                            android:textSize="14sp"
+                            android:textColor="#E7D249"
+                            app:layout_constraintTop_toTopOf="@+id/textView3"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView3"
+                            app:layout_constraintStart_toEndOf="@+id/textView3" android:layout_marginStart="16dp"/>
+                    <TextView
+                            android:text="خراسان رضوی ، تربت حیدریه"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView17"
+                            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView46"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/textView3" android:textSize="14sp"
+                            android:textColor="@color/gray" android:layout_marginStart="8dp"
+                            app:layout_constraintHorizontal_bias="1.0"/>
+                    <TextView
+                            android:text="محل زندگی"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView36"
+                            app:layout_constraintTop_toTopOf="@+id/textView17"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView17"
+                            app:layout_constraintStart_toEndOf="@+id/textView17" android:layout_marginStart="16dp"
+                            android:textSize="14sp" android:textColor="#E7D249"/>
+                    <TextView
+                            android:text="برنامه نویس"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView44"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp"
+                            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView17"
+                            app:layout_constraintEnd_toEndOf="@+id/textView17"
+                            app:layout_constraintHorizontal_bias="1.0" android:layout_marginBottom="16dp"
+                            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"/>
+                    <TextView
+                            android:text="شغل"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView45"
+                            android:textSize="14sp"
+                            android:textColor="#E7D249"
+                            app:layout_constraintTop_toTopOf="@+id/textView44"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView44"
+                            app:layout_constraintStart_toEndOf="@+id/textView44" android:layout_marginStart="16dp"/>
+                    <TextView
+                            android:text="۱۳۷۵/۰۹/۲۹"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView46"
+                            android:textColor="@color/gray"
+                            android:textSize="14sp"
+                            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/textView3"
+                            app:layout_constraintEnd_toEndOf="@+id/textView3"
+                            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                            app:layout_constraintHorizontal_bias="1.0"/>
+                    <TextView
+                            android:text="تاریخ تولد"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:textColor="#E7D249"
+                            android:id="@+id/textView47" app:layout_constraintStart_toEndOf="@+id/textView46"
+                            android:layout_marginStart="16dp"
+                            app:layout_constraintTop_toTopOf="@+id/textView46"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView46"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
-                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                                      android:layout_marginRight="20dp"
-                                      android:layout_marginLeft="20dp"
-                                      android:orientation="horizontal" android:layout_marginTop="4dp">
-                            <ImageView android:layout_width="0dp" android:layout_height="100dp"
-                                       android:layout_weight="0.3"
-                                       android:src="@drawable/tempgallery"/>
-                            <ImageView android:layout_width="0dp" android:layout_height="100dp"
-                                       android:layout_weight="0.3"
-                                       android:src="@drawable/tempgallery"
-                                       android:layout_marginLeft="4dp" android:layout_marginRight="4dp"/>
-                            <FrameLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content" android:layout_weight="0.3">
-
-                                <ImageView android:layout_width="match_parent" android:layout_height="100dp"
-                                           android:src="@drawable/tempgallery" android:alpha="0.9"/>
-                                <TextView
-                                        android:text="بیشتر"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content" android:id="@+id/textView3"
-                                        android:layout_gravity="center" android:textColor="#FFFFFF"
-                                        android:textSize="24sp"/>
-                            </FrameLayout>
-                        </LinearLayout>
-
-                    </LinearLayout>
-                    <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent" android:layout_marginBottom="10dp">
-                        <com.google.android.material.floatingactionbutton.FloatingActionButton
-                                android:src="@drawable/ic_add_a_photo_black_24dp"
-                                android:tint="@color/backgroundWhite"
-                                android:backgroundTint="@color/colorPrimary"
-                                app:fabSize="normal"
-                                android:layout_marginLeft="15dp"
-                                app:elevation="6dp" android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"/>
-                        <TextView
-                                android:text="افزودن عکس به گالری"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" android:id="@+id/textView7"
-                                android:layout_weight="1" android:gravity="left"
-                                android:layout_gravity="center_vertical" android:layout_marginLeft="10dp"
-                                android:textColor="@color/colorPrimary"/>
-                    </LinearLayout>
-                    <com.google.android.material.internal.BaselineLayout android:layout_width="match_parent"
-                          android:layout_height="0.6dp"
-                          android:alpha="0.4"
-                          android:background="@color/gray" app:expandedTitleMarginBottom="10dp"/>
-                </LinearLayout>
             </androidx.cardview.widget.CardView>
+
+            <TextView
+                    android:text="مشخصات فردی"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:id="@+id/textView" app:layout_constraintEnd_toEndOf="@+id/cardView2"
+                    android:layout_marginEnd="8dp" app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintHorizontal_bias="1.0" android:textStyle="bold"
+                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/cardView2"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabCustomSize="70dp"
+                    app:srcCompat="@drawable/def_prof"
+                    android:id="@+id/floatingActionButton" app:maxImageSize="70dp"
+                    app:borderWidth="0dp" app:elevation="4dp"
+                    app:backgroundTint="@android:color/transparent"
+                    android:visibility="visible"
+                    app:fab_stroke_visible="false"
+                    app:layout_constraintTop_toTopOf="@+id/cardView2"
+                    app:layout_constraintBottom_toTopOf="@+id/cardView2"
+                    app:layout_constraintEnd_toEndOf="@+id/cardView2"
+                    app:layout_constraintStart_toStartOf="@+id/cardView2"/>
+
+            <TextView
+                    android:text="مدیریت گروه"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:id="@+id/textView2222"
+                    app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/cardView2"
+                    app:layout_constraintEnd_toEndOf="@id/cardView2" app:layout_constraintHorizontal_bias="1.0"/>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:id="@+id/cardViewIntro"
+                    android:animateLayoutChanges="true"
+                    android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="@+id/cardView2"
+                    app:layout_constraintStart_toStartOf="@+id/cardView2"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2222" android:layout_marginTop="8dp"
+                    app:cardCornerRadius="8dp" app:cardElevation="4dp">
+                <include layout="@layout/info_group"/>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                    android:text="مدیریت رویدادها"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:id="@+id/modiriat_roydad"
+                    app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/cardViewIntro"
+                    app:layout_constraintEnd_toEndOf="@id/cardViewIntro" app:layout_constraintHorizontal_bias="1.0"/>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"
+                    app:layout_constraintTop_toBottomOf="@+id/modiriat_roydad"
+                    app:layout_constraintEnd_toEndOf="@+id/cardViewIntro"
+                    app:layout_constraintStart_toStartOf="@+id/cardViewIntro"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp" android:id="@+id/cardViewRoydad"
+                    android:layout_marginTop="8dp">
+                <include layout="@layout/roydad_group"/>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                    android:text="مدیریت مالی"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:id="@+id/modiriat_mali"
+                    app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/cardViewRoydad"
+                    app:layout_constraintEnd_toEndOf="@id/cardViewRoydad" app:layout_constraintHorizontal_bias="1.0"/>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabCustomSize="50dp"
+                    android:src="@drawable/add_event"
+                    android:id="@+id/addRoydad" app:maxImageSize="25dp"
+                    app:borderWidth="0dp" app:elevation="4dp"
+                    app:backgroundTint="@color/colorPrimary2"
+                    android:visibility="visible"
+                    app:fab_stroke_visible="true"
+                    android:tint="@color/colorPrimaryDark"
+                    app:layout_constraintBottom_toBottomOf="@+id/cardViewRoydad"
+                    app:layout_constraintTop_toBottomOf="@+id/cardViewRoydad"
+                    app:layout_constraintEnd_toEndOf="@+id/cardViewRoydad"
+                    app:layout_constraintStart_toStartOf="@+id/cardViewRoydad"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:text="ایجاد رویداد"
+                      android:textSize="12sp"
+                      android:textColor="@color/colorPrimaryDark"
+                      app:layout_constraintBottom_toBottomOf="@id/addRoydad"
+                      app:layout_constraintTop_toTopOf="@id/addRoydad"
+                      app:layout_constraintEnd_toStartOf="@id/addRoydad"
+                      app:layout_constraintHorizontal_bias="1"
+                      app:layout_constraintVertical_bias="1"/>
+            <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/modiriat_mali"
+                    app:layout_constraintEnd_toEndOf="@+id/cardViewRoydad"
+                    app:layout_constraintStart_toStartOf="@+id/cardViewRoydad"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="4dp" android:id="@+id/cardViewMali"
+                    android:layout_marginTop="8dp">
+                <include layout="@layout/mali_layout"/>
+            </androidx.cardview.widget.CardView>
+            <TextView
+                    android:text="مدیریت گالری"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:id="@+id/modiriat_gallery"
+                    app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/gray"
+                    android:textStyle="bold"
+                    android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/cardViewMali"
+                    app:layout_constraintEnd_toEndOf="@id/cardViewMali" app:layout_constraintHorizontal_bias="1.0"/>
+            <androidx.cardview.widget.CardView android:layout_width="0dp"
+                                               android:layout_height="150dp"
+                                               app:layout_constraintTop_toBottomOf="@id/modiriat_gallery"
+                                               app:layout_constraintEnd_toEndOf="@id/cardViewMali"
+                                               app:layout_constraintStart_toStartOf="@id/cardViewMali"
+                                               app:cardCornerRadius="8dp"
+                                               app:cardElevation="4dp"
+                                               android:id="@+id/cardViewGallery"
+                                               android:layout_marginTop="8dp">
+                <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                             android:layout_gravity="center_vertical"
+                             android:id="@+id/frameGalleryGroup"/>
+            </androidx.cardview.widget.CardView>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabCustomSize="50dp"
+                    android:src="@drawable/ic_add_a_photo_black_24dp"
+                    android:id="@+id/addGallery" app:maxImageSize="25dp"
+                    app:borderWidth="0dp" app:elevation="4dp"
+                    app:backgroundTint="@color/colorPrimaryDark"
+                    android:visibility="visible"
+                    app:fab_stroke_visible="true"
+                    android:tint="@color/white"
+                    app:layout_constraintBottom_toBottomOf="@+id/cardViewGallery"
+                    app:layout_constraintHorizontal_bias="0.2"
+                    app:layout_constraintTop_toBottomOf="@+id/cardViewGallery"
+                    app:layout_constraintEnd_toEndOf="@+id/cardViewGallery"
+                    app:layout_constraintStart_toStartOf="@+id/cardViewGallery"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
-        <ImageView
-                android:layout_width="80dp"
-                android:layout_height="80dp" app:srcCompat="@drawable/def_prof"
-                android:id="@+id/imageProfile"
-                android:layout_marginTop="8dp"
-                app:layout_constraintTop_toTopOf="@+id/layout_constraint"
-                app:layout_constraintBottom_toTopOf="@+id/layout_constraint" app:layout_constraintVertical_bias="0.556"
-                app:layout_constraintEnd_toEndOf="@+id/layout_constraint"
-                app:layout_constraintStart_toStartOf="@+id/layout_constraint"
-                app:layout_constraintHorizontal_bias="0.9"/>
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

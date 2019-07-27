@@ -19,7 +19,10 @@ import androidx.drawerlayout.widget.DrawerLayout
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.navigation.NavigationView
+import com.santalu.autoviewpager.AutoViewPager
 import ir.nilgroup.mountain44.R
+import ir.nilgroup.mountain44.adapter.GroupFavAdapter
+import ir.nilgroup.mountain44.adapter.MountFavAdapter
 import ir.nilgroup.mountain44.fragment.AppFragment
 import ir.nilgroup.mountain44.fragment.GroupFragment
 import ir.nilgroup.mountain44.fragment.MapFragment
@@ -28,6 +31,8 @@ import java.util.logging.Logger
 
 class MainActivity : AppCompatActivity() {
 
+    private lateinit var viewPagerMount: AutoViewPager
+    private lateinit var viewPagerGroup: AutoViewPager
     private lateinit var mDrawerLayout: DrawerLayout
     private lateinit var mNavigation: NavigationView
     private lateinit var mToggle: ActionBarDrawerToggle
@@ -55,6 +60,8 @@ class MainActivity : AppCompatActivity() {
 
         configureNavigationDrawer()
         configureToolbar()
+
+        viewpagers()
 
         appBarLayout.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, i ->
             Logger.getLogger("offset").info("offset is : $i")
@@ -87,6 +94,22 @@ class MainActivity : AppCompatActivity() {
 
         mToggle = ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close)
 
+    }
+
+    private fun viewpagers() {
+        viewPagerMount = findViewById(R.id.viewpager_mount)
+        viewPagerGroup = findViewById(R.id.viewpager_group)
+
+        viewPagerMount.apply {
+            adapter = MountFavAdapter(supportFragmentManager)
+            //autoScroll = true
+            //indeterminate = true
+        }
+        viewPagerGroup.apply {
+            adapter = GroupFavAdapter(supportFragmentManager)
+            //autoScroll = true
+            //indeterminate = true
+        }
     }
 
     private fun configureToolbar() {
