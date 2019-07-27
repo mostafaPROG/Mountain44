@@ -10,6 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 import ir.nilgroup.mountain44.base.GalleryData
 import ir.nilgroup.mountain44.R
 import ir.nilgroup.mountain44.adapter.GalleryAdapter
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.DividerItemDecoration
+
+
 
 class GalleryFragmentHorizonal : Fragment() {
 
@@ -35,6 +39,9 @@ class GalleryFragmentHorizonal : Fragment() {
         recyclerView = view.findViewById(R.id.recyclerGalleryGroup)
         recyclerView.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,true)
         adapter = GalleryAdapter(list, context!!)
+        val itemDecorator = DividerItemDecoration(context!!, DividerItemDecoration.HORIZONTAL)
+        itemDecorator.setDrawable(ContextCompat.getDrawable(context!!, R.drawable.divider)!!)
+        recyclerView.addItemDecoration(itemDecorator)
         recyclerView.adapter = adapter
 
 

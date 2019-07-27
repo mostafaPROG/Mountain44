@@ -1,14 +1,21 @@
 package ir.nilgroup.mountain44.fragment
 
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.widget.Button
 import android.widget.FrameLayout
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.tabs.TabLayout
 import ir.nilgroup.mountain44.R
+import ir.nilgroup.mountain44.adapter.TableViewAdapter
+import ir.nilgroup.mountain44.base.RegisterNumber
 import ir.nilgroup.mountain44.fragment.profileFragment.*
 
 class ProfileFragment : AppCompatActivity() {
@@ -67,11 +74,11 @@ class ProfileFragment : AppCompatActivity() {
             }
         })
 
-
-
-        fragmentTransaction!!.replace(R.id.frameEvent, CurrentEvent.newInstance())
-        fragmentTransaction!!.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-        fragmentTransaction!!.commit()
+        val fragmentManager2 = supportFragmentManager
+        val fragmentTransaction2 = fragmentManager2!!.beginTransaction()
+        fragmentTransaction2.replace(R.id.frameEvent, CurrentEvent.newInstance())
+        fragmentTransaction2.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+        fragmentTransaction2.commit()
 
         tabLayoutEvent!!.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
@@ -97,8 +104,12 @@ class ProfileFragment : AppCompatActivity() {
             }
         })
 
-    }
 
+        findViewById<Button>(R.id.btnCertificate).setOnClickListener {
+
+        }
+
+    }
 
 
 

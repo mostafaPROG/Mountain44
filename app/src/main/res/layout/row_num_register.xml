@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="horizontal"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content" android:layoutDirection="rtl">
+
+    <TextView
+            android:text="نام"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content" android:id="@+id/registerName" android:textSize="18sp"
+            android:fontFamily="@font/yekan" android:textStyle="bold" android:layout_gravity="center|top"
+            android:textColor="@color/darkGray" android:layout_margin="8dp"/>
+    <TextView
+            android:text="نام خانوادگی"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content" android:id="@+id/registerFamily" android:textSize="18sp"
+            android:fontFamily="@font/yekan" android:textStyle="bold" android:layout_gravity="center|top"
+            android:textColor="@color/darkGray" android:layout_margin="8dp"/>
+    <TextView
+            android:text="شماره تماس"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content" android:id="@+id/registerPhone" android:textSize="18sp"
+            android:fontFamily="@font/yekan" android:textStyle="bold" android:layout_gravity="center|top"
+            android:textColor="@color/darkGray" android:layout_margin="8dp"/>
+    <TextView
+            android:text="هزینه"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" android:id="@+id/registerCost" android:textSize="18sp"
+            android:fontFamily="@font/yekan" android:textStyle="bold" android:layout_gravity="center|top"
+            android:textColor="@color/darkGray" android:layout_margin="8dp"/>
+</LinearLayout>

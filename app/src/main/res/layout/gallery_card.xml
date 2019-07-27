@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
                                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                                   xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent"
+                                   xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="250dp"
                                    android:layout_height="150dp"
-                                   android:layoutDirection="rtl" app:cardCornerRadius="4dp">
+                                   android:layoutDirection="rtl"
+                                   app:cardBackgroundColor="@android:color/transparent">
     <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
                                                        android:layout_height="match_parent">
         <ImageView android:id="@+id/imageGalleryGroup" android:layout_width="0dp" android:layout_height="0dp"

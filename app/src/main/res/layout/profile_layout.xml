@@ -29,7 +29,7 @@
             <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/cardView2"
+                    android:id="@+id/cardViewInfo"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
                     android:layout_marginEnd="16dp" android:layout_marginTop="80dp"
@@ -136,16 +136,59 @@
             </androidx.cardview.widget.CardView>
 
             <TextView
-                    android:text="مشخصات فردی"
+                    android:text="مشخصات گروه"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/yekan"
-                    android:id="@+id/textView" app:layout_constraintEnd_toEndOf="@+id/cardView2"
+                    android:id="@+id/textViewInfoGroup" app:layout_constraintEnd_toEndOf="@+id/cardViewInfo"
                     android:layout_marginEnd="8dp" app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
                     android:layout_marginStart="8dp"
                     android:textColor="@color/white"
                     app:layout_constraintHorizontal_bias="1.0" android:textStyle="bold"
-                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/cardView2"/>
+                    app:layout_constraintTop_toBottomOf="@id/cardViewInfo"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/cardViewInfoGroup"/>
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cardViewInfoGroup"
+                    app:layout_constraintEnd_toEndOf="@id/cardViewInfo"
+                    app:layout_constraintStart_toStartOf="@id/cardViewInfo" android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp" android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewInfoGroup"
+                    app:layout_goneMarginTop="8dp"
+                    app:cardCornerRadius="8dp" app:cardElevation="4dp">
+                <include layout="@layout/info_group2"/>
+            </androidx.cardview.widget.CardView>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabCustomSize="70dp"
+                    app:srcCompat="@drawable/logo2"
+                    android:id="@+id/logoGroupProfile" app:maxImageSize="70dp"
+                    app:borderWidth="1dp" app:elevation="4dp"
+                    app:backgroundTint="@color/white"
+                    android:visibility="visible"
+                    app:fab_stroke_visible="true"
+                    app:layout_constraintTop_toTopOf="@+id/cardViewInfoGroup"
+                    app:layout_constraintBottom_toTopOf="@+id/cardViewInfoGroup"
+                    app:layout_constraintEnd_toEndOf="@+id/cardViewInfoGroup"
+                    app:layout_constraintStart_toStartOf="@+id/cardViewInfoGroup"/>
+
+
+            <TextView
+                    android:text="مشخصات فردی"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/yekan"
+                    android:id="@+id/textView" app:layout_constraintEnd_toEndOf="@+id/cardViewInfo"
+                    android:layout_marginEnd="8dp" app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/white"
+                    app:layout_constraintHorizontal_bias="1.0" android:textStyle="bold"
+                    android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/cardViewInfo"/>
             <com.google.android.material.floatingactionbutton.FloatingActionButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -156,10 +199,10 @@
                     app:backgroundTint="@android:color/transparent"
                     android:visibility="visible"
                     app:fab_stroke_visible="false"
-                    app:layout_constraintTop_toTopOf="@+id/cardView2"
-                    app:layout_constraintBottom_toTopOf="@+id/cardView2"
-                    app:layout_constraintEnd_toEndOf="@+id/cardView2"
-                    app:layout_constraintStart_toStartOf="@+id/cardView2"/>
+                    app:layout_constraintTop_toTopOf="@+id/cardViewInfo"
+                    app:layout_constraintBottom_toTopOf="@+id/cardViewInfo"
+                    app:layout_constraintEnd_toEndOf="@+id/cardViewInfo"
+                    app:layout_constraintStart_toStartOf="@+id/cardViewInfo"/>
 
             <TextView
                     android:text="مدیریت گروه"
@@ -169,16 +212,16 @@
                     android:id="@+id/textView2222"
                     app:layout_constraintStart_toEndOf="@+id/floatingActionButton"
                     android:layout_marginStart="8dp"
-                    android:textColor="@color/white"
+                    android:textColor="@color/gray"
                     android:textStyle="bold"
-                    android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/cardView2"
-                    app:layout_constraintEnd_toEndOf="@id/cardView2" app:layout_constraintHorizontal_bias="1.0"/>
+                    android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/cardViewInfoGroup"
+                    app:layout_constraintEnd_toEndOf="@id/cardViewInfo" app:layout_constraintHorizontal_bias="1.0"/>
             <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
                     android:id="@+id/cardViewIntro"
                     android:animateLayoutChanges="true"
-                    android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="@+id/cardView2"
-                    app:layout_constraintStart_toStartOf="@+id/cardView2"
+                    android:layout_height="wrap_content" app:layout_constraintEnd_toEndOf="@+id/cardViewInfo"
+                    app:layout_constraintStart_toStartOf="@+id/cardViewInfo"
                     app:layout_constraintTop_toBottomOf="@+id/textView2222" android:layout_marginTop="8dp"
                     app:cardCornerRadius="8dp" app:cardElevation="4dp">
                 <include layout="@layout/info_group"/>
@@ -197,7 +240,7 @@
                     app:layout_constraintEnd_toEndOf="@id/cardViewIntro" app:layout_constraintHorizontal_bias="1.0"/>
             <androidx.cardview.widget.CardView
                     android:layout_width="0dp"
-                    android:layout_height="200dp"
+                    android:layout_height="wrap_content"
                     app:layout_constraintTop_toBottomOf="@+id/modiriat_roydad"
                     app:layout_constraintEnd_toEndOf="@+id/cardViewIntro"
                     app:layout_constraintStart_toStartOf="@+id/cardViewIntro"
@@ -225,10 +268,10 @@
                     android:src="@drawable/add_event"
                     android:id="@+id/addRoydad" app:maxImageSize="25dp"
                     app:borderWidth="0dp" app:elevation="4dp"
-                    app:backgroundTint="@color/colorPrimary2"
+                    app:backgroundTint="@color/yellow"
                     android:visibility="visible"
                     app:fab_stroke_visible="true"
-                    android:tint="@color/colorPrimaryDark"
+                    android:tint="@color/darkGray"
                     app:layout_constraintBottom_toBottomOf="@+id/cardViewRoydad"
                     app:layout_constraintTop_toBottomOf="@+id/cardViewRoydad"
                     app:layout_constraintEnd_toEndOf="@+id/cardViewRoydad"
