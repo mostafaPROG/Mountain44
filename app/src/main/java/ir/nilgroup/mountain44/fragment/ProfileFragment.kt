@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.FrameLayout
+import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -50,6 +51,9 @@ class ProfileFragment : AppCompatActivity() {
         fragmentTransaction!!.replace(R.id.frameGalleryGroup, GalleryFragmentHorizonal())
         fragmentTransaction!!.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
         fragmentTransaction!!.commit()
+
+        val tab:TabLayout.Tab = tabLayoutGroup.getTabAt(1)!!
+        tab.select()
 
         tabLayoutGroup!!.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
@@ -106,11 +110,21 @@ class ProfileFragment : AppCompatActivity() {
 
 
         findViewById<Button>(R.id.btnCertificate).setOnClickListener {
-
+            val dialog = LayoutInflater.from(this).inflate(R.layout.image_dialog, null)
+            val builder = AlertDialog.Builder(this).setView(dialog)
+            dialog.findViewById<ImageView>(R.id.imageDialog).setImageResource(R.drawable.mojavez)
+            builder.show()
+            builder.setCancelable(true)
+        }
+        findViewById<Button>(R.id.btnTagdir).setOnClickListener {
+            val dialog = LayoutInflater.from(this).inflate(R.layout.image_dialog, null)
+            val builder = AlertDialog.Builder(this).setView(dialog)
+            dialog.findViewById<ImageView>(R.id.imageDialog).setImageResource(R.drawable.tagdir)
+            builder.show()
+            builder.setCancelable(true)
         }
 
     }
-
 
 
 

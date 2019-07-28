@@ -10,6 +10,7 @@ import android.view.View
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -21,6 +22,7 @@ import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.navigation.NavigationView
 import com.santalu.autoviewpager.AutoViewPager
 import ir.nilgroup.mountain44.R
+import ir.nilgroup.mountain44.adapter.EventFavAdapter
 import ir.nilgroup.mountain44.adapter.GroupFavAdapter
 import ir.nilgroup.mountain44.adapter.MountFavAdapter
 import ir.nilgroup.mountain44.fragment.AppFragment
@@ -28,11 +30,13 @@ import ir.nilgroup.mountain44.fragment.GroupFragment
 import ir.nilgroup.mountain44.fragment.MapFragment
 import ir.nilgroup.mountain44.fragment.ProfileFragment
 import java.util.logging.Logger
+import kotlin.math.abs
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var viewPagerMount: AutoViewPager
     private lateinit var viewPagerGroup: AutoViewPager
+    private lateinit var viewPagerEvent: AutoViewPager
     private lateinit var mDrawerLayout: DrawerLayout
     private lateinit var mNavigation: NavigationView
     private lateinit var mToggle: ActionBarDrawerToggle
@@ -42,7 +46,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var nestedScrollView: NestedScrollView
     private lateinit var constBig: ConstraintLayout
     private lateinit var constSm: ConstraintLayout
-    private lateinit var loginBtn: LinearLayout
+    private lateinit var loginBtn: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,11 +55,11 @@ class MainActivity : AppCompatActivity() {
         constSm = findViewById(R.id.layout_constraintSm)
         constBig = findViewById(R.id.layout_constraintBig)
         nestedScrollView = findViewById(R.id.nestedScrollView)
-        loginBtn = findViewById(R.id.loginMain)
+        loginBtn = findViewById(R.id.registerGroupMain)
         appBarLayout = findViewById(R.id.appbar)
 
         loginBtn.setOnClickListener {
-            startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+            startActivity(Intent(this@MainActivity, RegisterGroup::class.java))
         }
 
         configureNavigationDrawer()
@@ -64,15 +68,17 @@ class MainActivity : AppCompatActivity() {
         viewpagers()
 
         appBarLayout.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, i ->
-            Logger.getLogger("offset").info("offset is : $i")
-            var newOffset = Math.abs(i)
+            Logger.getLogger("offset").info("offset is : $i     total is :${appBarLayout.totalScrollRange}")
+            var newOffset = abs(i)
             when {
                 newOffset > 500 -> {
 //                    constBig.visibility = View.GONE
 //                    constSm.visibility = View.VISIBLE
 //                    fadeOut(constBig)
-                    constSm.visibility = View.VISIBLE
-                    fadeIn(constSm)
+                    if (newOffset != appBarLayout.totalScrollRange){
+                        constSm.visibility = View.VISIBLE
+                        fadeIn(constSm)
+                    }
                 }
                 newOffset < 100 -> {
 //                    constBig.visibility = View.VISIBLE
@@ -99,6 +105,7 @@ class MainActivity : AppCompatActivity() {
     private fun viewpagers() {
         viewPagerMount = findViewById(R.id.viewpager_mount)
         viewPagerGroup = findViewById(R.id.viewpager_group)
+        viewPagerEvent = findViewById(R.id.viewpager_event)
 
         viewPagerMount.apply {
             adapter = MountFavAdapter(supportFragmentManager)
@@ -107,6 +114,11 @@ class MainActivity : AppCompatActivity() {
         }
         viewPagerGroup.apply {
             adapter = GroupFavAdapter(supportFragmentManager)
+            //autoScroll = true
+            //indeterminate = true
+        }
+        viewPagerEvent.apply {
+            adapter = EventFavAdapter(supportFragmentManager)
             //autoScroll = true
             //indeterminate = true
         }
@@ -195,4 +207,5 @@ class MainActivity : AppCompatActivity() {
     override fun onBackPressed() {
         finishAffinity()
     }
+
 }

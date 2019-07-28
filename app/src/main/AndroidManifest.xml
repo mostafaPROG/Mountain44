@@ -23,6 +23,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".activities.RegisterGroup">
+        </activity>
         <activity android:name=".activities.GroupProfileActivity">
         </activity>
         <activity android:name=".activities.CheckList2">
@@ -43,6 +45,11 @@
                 android:value="@integer/google_play_services_version"/>
 
         <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
         <activity android:name=".fragment.AppFragment"/>
         <activity android:name=".activities.CourseActivity"/>

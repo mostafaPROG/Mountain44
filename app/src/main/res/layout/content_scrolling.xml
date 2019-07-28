@@ -80,13 +80,41 @@
             android:layout_width="0dp"
             android:layout_height="160dp"
             android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
             android:id="@+id/viewpager_group"
             app:avp_autoScroll="true"
             app:avp_duration="5000"
             app:avp_indeterminate="true"
             app:layout_constraintTop_toBottomOf="@+id/button3" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"
             android:layout_marginEnd="8dp" android:layout_marginStart="8dp"/>
+    <TextView
+            android:text="رویدادهای پیش رو"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView32" android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/viewpager_group" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="8dp" android:fontFamily="@font/yekan" android:textColor="@color/gray"
+            android:textSize="18sp" android:paddingLeft="10dp" android:paddingRight="10dp"/>
+    <Button
+            android:text="بیشتر"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:id="@+id/button7" app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@+id/textView32"
+            app:layout_constraintBottom_toBottomOf="@+id/textView32" android:textColor="@color/white"
+            android:background="@drawable/background"/>
+    <com.santalu.autoviewpager.AutoViewPager
+            android:layout_width="0dp"
+            android:layout_height="260dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/viewpager_event"
+            android:layout_marginTop="16dp"
+            app:avp_autoScroll="true"
+            app:avp_duration="5000"
+            app:avp_indeterminate="true"
+            app:layout_constraintTop_toBottomOf="@+id/textView32" android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="32dp"
+            android:layout_marginStart="8dp" app:layout_constraintVertical_bias="0.0"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
