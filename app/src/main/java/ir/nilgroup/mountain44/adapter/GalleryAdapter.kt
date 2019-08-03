@@ -12,14 +12,22 @@ import com.bumptech.glide.load.engine.executor.GlideExecutor
 import ir.nilgroup.mountain44.base.GalleryData
 import ir.nilgroup.mountain44.R
 
-class GalleryAdapter(val arrayList: ArrayList<GalleryData>, val context: Context):RecyclerView.Adapter<GalleryAdapter.ViewHolder>() {
+class GalleryAdapter(val arrayList: ArrayList<GalleryData>, val context: Context, val type: Int) :
+    RecyclerView.Adapter<GalleryAdapter.ViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.gallery_card, parent, false)
-        return ViewHolder(view)
+        return when (type) {
+            1 -> {
+                val view = LayoutInflater.from(parent.context).inflate(R.layout.gallery_card2, parent, false)
+                ViewHolder(view)
+            }
+            else -> {
+                val view = LayoutInflater.from(parent.context).inflate(R.layout.gallery_card, parent, false)
+                ViewHolder(view)
+            }
+        }
     }
-
 
     override fun getItemCount(): Int = arrayList.size
 
@@ -36,11 +44,11 @@ class GalleryAdapter(val arrayList: ArrayList<GalleryData>, val context: Context
     }
 
 
-    class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView) {
-        val image:ImageView = itemView.findViewById(R.id.imageGalleryGroup)
-        val title:TextView = itemView.findViewById(R.id.titleGalleryGroup)
-        val time:TextView = itemView.findViewById(R.id.timeGalleryGroup)
-        val number:TextView = itemView.findViewById(R.id.numberGalleryGroup)
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val image: ImageView = itemView.findViewById(R.id.imageGalleryGroup)
+        val title: TextView = itemView.findViewById(R.id.titleGalleryGroup)
+        val time: TextView = itemView.findViewById(R.id.timeGalleryGroup)
+        val number: TextView = itemView.findViewById(R.id.numberGalleryGroup)
     }
 
 }

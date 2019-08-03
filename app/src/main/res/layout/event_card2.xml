@@ -64,7 +64,7 @@
         <Button
                 android:text="ثبت نام"
                 android:layout_width="wrap_content"
-                android:id="@+id/button8"
+                android:id="@+id/registerEventMain"
                 app:layout_constraintBottom_toBottomOf="@+id/eventStateMain"
                 android:background="@drawable/background_login_text" android:textColor="@color/white"
                 android:layout_height="40dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"

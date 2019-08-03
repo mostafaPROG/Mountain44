@@ -5,7 +5,8 @@
                                            android:id="@+id/drawer_layoutL" android:fitsSystemWindows="true"
                                            android:layout_width="match_parent" android:layout_height="match_parent">
     <androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="match_parent"
-                                                         android:layout_height="match_parent">
+                                                         android:layout_height="match_parent"
+                                                         android:layoutDirection="ltr">
         <com.google.android.material.appbar.AppBarLayout android:id="@+id/appbar"
                                                          android:background="@drawable/back_mount"
                                                          android:layout_width="match_parent"

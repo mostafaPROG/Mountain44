@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      android:gravity="end"
+      android:layoutDirection="rtl"
+      android:layout_gravity="end">
+    <group android:id="@+id/gr1" android:layout_gravity="end"
+           android:gravity="end">
+        <item android:id="@+id/editProfileInf" android:layout_gravity="end"
+              android:gravity="end"
+              android:title="ویرایش مشخصات فردی"/>
+        <item android:id="@+id/editProfileGR" android:layout_gravity="end"
+              android:gravity="end"
+              android:title="ویرایش مشخصات گروه"/>
+    </group>
+    <group android:id="@+id/gr2" android:layout_gravity="end"
+           android:gravity="end">
+        <item android:id="@+id/addEventOp" android:layout_gravity="end"
+              android:gravity="end"
+              android:title="اضافه کردن رویداد +"/>
+        <item android:id="@+id/addGalleryOp" android:layout_gravity="end"
+              android:gravity="end"
+              android:title="اضافه کردن گالری +"/>
+    </group>
+    <group android:id="@+id/gr3" android:layout_gravity="end"
+           android:gravity="end">
+        <item android:id="@+id/editEventOp" android:layout_gravity="end"
+              android:gravity="end"
+              android:title="ویرایش یا حذف رویداد "/>
+        <item android:id="@+id/editGalleryOp" android:layout_gravity="end"
+              android:gravity="end"
+              android:title="ویرایش یا حذف گالری"/>
+    </group>
+    <group android:orderInCategory="1" android:id="@+id/gr4" android:layout_gravity="end"
+           android:gravity="end">
+        <item android:id="@+id/feedMoneyBagOp" android:layout_gravity="end"
+              android:gravity="end"
+              android:title="گزارش گیری کیف پول"/>
+    </group>
+
+</menu>

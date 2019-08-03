@@ -9,6 +9,7 @@ import ir.nilgroup.mountain44.base.MountFragment
 
 class EventFavAdapter(manager: FragmentManager) : FragmentStatePagerAdapter(manager) {
 
+
         override fun getItem(position: Int): Fragment {
             return EventFavFragment.newInstance(position)
         }

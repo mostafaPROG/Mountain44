@@ -79,6 +79,9 @@ dependencies {
     implementation 'com.github.iammert:ScalingLayout:1.2.1'
     implementation 'com.github.santalu:auto-viewpager:1.0.8'
 
+    implementation 'com.aminography:primedatepicker:1.0.6'
+    implementation 'com.aminography:primecalendar:1.2.13'
+
     //Typer animation textview
     implementation "com.hanks:htextview-typer:$htextview_version"
     implementation "com.hanks:htextview-base:$htextview_version"        // base library

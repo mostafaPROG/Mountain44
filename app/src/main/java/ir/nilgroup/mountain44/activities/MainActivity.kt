@@ -174,7 +174,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.mapCardL -> Intent(this@MainActivity, MapFragment()::class.java)
                 R.id.mapCardJ -> Intent(this@MainActivity, MapFragment()::class.java)
 
-                else -> Intent(this@MainActivity, AppFragment()::class.java)
+                else -> Intent(this@MainActivity, StoreActivity()::class.java)
             }
         )
     }

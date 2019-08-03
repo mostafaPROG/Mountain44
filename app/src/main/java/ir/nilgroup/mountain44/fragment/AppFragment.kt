@@ -15,11 +15,14 @@ import android.location.LocationListener
 import android.location.LocationManager
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
+import android.net.Uri
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.RotateAnimation
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.cardview.widget.CardView
@@ -100,6 +103,9 @@ class AppFragment : AppCompatActivity()
         findViewById<CardView>(R.id.checkListId).setOnClickListener {
             startActivity(Intent(this, CheckList2::class.java))
         }
+        findViewById<CardView>(R.id.sosCallCardL).setOnClickListener {
+            dialogEmergency()
+        }
         //    getHeight
         heightGet()
 
@@ -121,6 +127,20 @@ class AppFragment : AppCompatActivity()
         //      pressure init
         pressureInit()
 
+    }
+
+    @SuppressLint("MissingPermission")
+    private fun dialogEmergency() {
+        val dialog = LayoutInflater.from(this).inflate(R.layout.sos_dialog, null)
+        val builder = AlertDialog.Builder(this).setView(dialog).show()
+//        dialog.findViewById<Button>(R.id.callBtnDialog).setOnClickListener {
+//            val id =
+//                dialog.findViewById<RadioButton>(dialog.findViewById<RadioGroup>(R.id.radioGroupEmergency).checkedRadioButtonId)
+//                    .tag
+//            val intent = Intent(Intent.ACTION_CALL)
+//            intent.data = Uri.parse("tel:$id")
+//            startActivity(intent)
+//        }
     }
 
     private fun weatherInit() {

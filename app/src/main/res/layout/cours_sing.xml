@@ -3,7 +3,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent" android:layoutDirection="ltr">
     <com.google.android.material.appbar.AppBarLayout
             android:id="@+id/appbar"
             android:layout_height="192dp"
@@ -47,20 +47,21 @@
                       android:textSize="18sp"
                       android:textStyle="bold"
                       android:textColor="@color/gray" android:id="@+id/titleSing"/>
-            <com.google.android.material.internal.BaselineLayout android:layout_width="match_parent" android:layout_height="0.75dp"
-                  android:background="@color/gray"/>
+            <com.google.android.material.internal.BaselineLayout android:layout_width="match_parent"
+                                                                 android:layout_height="0.75dp"
+                                                                 android:background="@color/gray"/>
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
                       android:layout_margin="8dp"
                       android:textSize="14sp"
                       android:textColor="@color/black"
-            android:id="@+id/descriptionCourseActivity"/>
-                <Button android:layout_width="150dp" android:layout_height="wrap_content"
-                        android:text="ثبت نام"
-                        android:layout_gravity="center"
-                        android:textSize="22sp"
-                        android:fontFamily="@font/yekan"
-                        android:background="@drawable/background"
-                        android:textColor="@color/backgroundWhite"/>
+                      android:id="@+id/descriptionCourseActivity"/>
+            <Button android:layout_width="150dp" android:layout_height="wrap_content"
+                    android:text="ثبت نام"
+                    android:layout_gravity="center"
+                    android:textSize="22sp"
+                    android:fontFamily="@font/yekan"
+                    android:background="@drawable/background"
+                    android:textColor="@color/backgroundWhite"/>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

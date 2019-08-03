@@ -3,7 +3,7 @@
                                                    xmlns:app="http://schemas.android.com/apk/res-auto"
                                                    android:id="@+id/constraintLayoutMap"
                                                    android:layout_width="match_parent"
-                                                   android:layout_height="match_parent">
+                                                   android:layout_height="match_parent" android:layoutDirection="ltr">
     <fragment android:name="com.google.android.gms.maps.SupportMapFragment" android:id="@+id/map"
               android:layout_width="0dp" android:layout_height="0dp" app:layout_constraintBottom_toBottomOf="parent"
               app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
@@ -15,7 +15,8 @@
                                           app:defaultQueryHint="قله ها را جست و جو کن"
                                           app:layout_constraintHorizontal_chainStyle="spread"
                                           app:layout_constraintHorizontal_weight="5"
-                                          app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"
+                                          app:layout_constraintStart_toStartOf="parent"
+                                          app:layout_constraintTop_toTopOf="parent"
                                           style="@style/SearchView"/>
     <com.google.android.material.floatingactionbutton.FloatingActionButton android:id="@+id/mapStyle"
                                                                            android:layout_width="wrap_content"

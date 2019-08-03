@@ -1,53 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
                                        xmlns:app="http://schemas.android.com/apk/res-auto"
-                                       xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent"
-                                       android:layout_height="match_parent" android:fillViewport="true">
-    <LinearLayout android:orientation="vertical" android:layout_width="match_parent"
-                  android:layout_height="match_parent">
-        <CalendarView android:id="@+id/calendarView" android:layout_width="match_parent"
-                      android:layout_height="wrap_content"/>
-        <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="100dp">
-            <com.google.android.material.internal.BaselineLayout android:background="@color/gray"
-                                                                 android:layout_width="match_parent"
-                                                                 android:layout_height="0.6dp"
-                                                                 android:layout_marginBottom="8dp" android:alpha="0.4"
-                                                                 android:layout_marginStart="8dp"
-                                                                 android:layout_marginEnd="8dp"/>
-            <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
-                                                               android:layout_height="match_parent">
-                <TextView android:textSize="18sp" android:textColor="@color/colorPrimaryDark"
-                          android:layout_gravity="right" android:id="@+id/textView4" android:layout_width="wrap_content"
-                          android:layout_height="wrap_content" android:layout_marginBottom="8dp"
-                          android:text="رویداد ها" android:fontFamily="@font/iransansweb_bold"
-                          android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
-                          app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                          app:layout_constraintHorizontal_bias="0.976" app:layout_constraintStart_toStartOf="parent"
-                          app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.246"/>
-                <androidx.cardview.widget.CardView android:id="@+id/cardView" android:clipToPadding="false"
-                                                   android:layout_width="match_parent" android:layout_height="40dp"
-                                                   android:layout_marginTop="8dp" android:layout_marginStart="8dp"
-                                                   android:layout_marginEnd="8dp"
-                                                   app:cardBackgroundColor="@color/colorAccent"
-                                                   app:cardCornerRadius="5dp" app:layout_constraintBottom_toBottomOf="parent"
-                                                   app:layout_constraintEnd_toEndOf="parent"
-                                                   app:layout_constraintStart_toStartOf="parent"
-                                                   app:layout_constraintTop_toBottomOf="@+id/textView4">
-                    <LinearLayout android:gravity="center" android:layout_width="match_parent"
-                                  android:layout_height="match_parent">
-                        <TextView android:textColor="#5f5f5f" android:gravity="end" android:id="@+id/textView6"
-                                  android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                  android:layout_marginLeft="8dp" android:text="بیشتر" android:layout_weight="1"/>
-                        <TextView android:textColor="@color/black" android:id="@+id/textView5"
-                                  android:layout_width="wrap_content" android:layout_height="wrap_content"
-                                  android:layout_marginRight="10dp" android:text="تور صعود به قله بینالود"
-                                  android:layout_weight="1"/>
-                        <ImageView android:id="@+id/imageView4" android:layout_width="wrap_content"
-                                   android:layout_height="wrap_content"
-                                   android:src="@drawable/ic_info_outline_black_24dp" android:layout_weight="0.1"/>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
+                                       xmlns:aapt="http://schemas.android.com/aapt"
+                                       xmlns:tools="http://schemas.android.com/tools"
+                                       android:layout_width="match_parent"
+                                       android:layout_height="wrap_content" android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+                                                       android:layout_height="match_parent">
+
+        <com.aminography.primedatepicker.calendarview.PrimeCalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent">
+        </com.aminography.primedatepicker.calendarview.PrimeCalendarView>
+        <TextView
+                android:text="رویداد ها"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView5" android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/calendarView" app:layout_constraintHorizontal_bias="1.0"/>
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                                           xmlns:app="http://schemas.android.com/apk/res-auto"
+                                           xmlns:tools="http://schemas.android.com/tools"
+                                           android:layout_width="match_parent"
+                                           android:layout_height="wrap_content"
+                                           app:cardCornerRadius="4dp"
+                                           app:cardElevation="0dp"
+                                           app:cardMaxElevation="0dp"
+                                           app:layout_constraintStart_toStartOf="parent"
+                                           app:layout_constraintEnd_toEndOf="parent"
+                                           android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+                                           android:layout_marginTop="8dp"
+                                           app:layout_constraintTop_toBottomOf="@id/textView5">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="120dp" android:src="@drawable/event_back"
+                        android:id="@+id/eventImageMain" app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+                        android:scaleType="centerCrop"/>
+                <Button
+                        android:text="تور 3.5 روزه دره نوردی تنگه رغز"
+                        android:layout_width="wrap_content"
+                        android:layout_height="40dp"
+                        android:id="@+id/eventNameMain" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/eventImageMain"
+                        app:layout_constraintBottom_toBottomOf="@+id/eventImageMain"
+                        android:backgroundTint="@color/yellow"
+                        android:paddingHorizontal="12dp"
+                        app:layout_constraintEnd_toEndOf="@+id/eventImageMain"
+                        app:layout_constraintStart_toStartOf="@+id/eventImageMain"
+                        android:background="@drawable/background" android:textSize="20sp"
+                        android:fontFamily="@font/yekan"
+                        android:textColor="@color/white"/>
+                <TextView
+                        android:text="۲۸ مرداد تا ۳۱ مرداد"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/eventDateMain" app:layout_constraintStart_toStartOf="@+id/eventNameMain"
+                        app:layout_constraintEnd_toEndOf="@+id/eventNameMain" android:layout_marginTop="8dp"
+                        app:layout_constraintTop_toBottomOf="@+id/eventNameMain" android:textSize="12sp"
+                        android:textColor="@color/blue_dark"/>
+                <TextView
+                        android:text="وضعیت"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView51"
+                        app:layout_constraintTop_toBottomOf="@+id/eventDateMain"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:layout_marginStart="8dp"
+                        android:textSize="12sp" android:textColor="@color/gray"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintHorizontal_chainStyle="spread" android:layout_marginEnd="8dp"
+                        app:layout_constraintEnd_toStartOf="@+id/eventDateMain"/>
+                <TextView
+                        android:text="پیش رو"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:id="@+id/eventStateMain"
+                        app:layout_constraintTop_toBottomOf="@+id/textView51"
+                        app:layout_constraintStart_toStartOf="@+id/textView51"
+                        android:paddingHorizontal="12dp"
+                        android:backgroundTint="@color/green"
+                        app:layout_constraintEnd_toEndOf="@+id/textView51"
+                        android:background="@drawable/back_stroke_pr2"
+                        android:gravity="center" android:textColor="@color/green"
+                        android:fontFamily="@font/iransansweb_medium" android:layout_marginBottom="8dp"
+                        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"/>
+                <Button
+                        android:text="ثبت نام"
+                        android:layout_width="wrap_content"
+                        android:id="@+id/registerEventMain"
+                        app:layout_constraintBottom_toBottomOf="@+id/eventStateMain"
+                        android:background="@drawable/background_login_text" android:textColor="@color/white"
+                        android:layout_height="40dp" android:layout_marginEnd="8dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintTop_toTopOf="@+id/eventStateMain"
+                        android:backgroundTint="@color/colorPrimary"
+                        app:layout_constraintStart_toEndOf="@+id/eventDateMain"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
-    </LinearLayout>
+        </androidx.cardview.widget.CardView>    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

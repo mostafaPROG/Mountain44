@@ -34,7 +34,7 @@ class GalleryFragment : Fragment() {
 
         recyclerView = view.findViewById(R.id.recyclerGalleryGroup)
         recyclerView.layoutManager = LinearLayoutManager(context)
-        adapter = GalleryAdapter(list, context!!)
+        adapter = GalleryAdapter(list, context!!,0)
         recyclerView.adapter = adapter
 
 

@@ -16,4 +16,8 @@ class LoginActivity : AppCompatActivity() {
         fr.replace(R.id.fragmentLogin, StartLoginFragment())
         fr.commit()
     }
+
+    override fun onBackPressed() {
+        finishAffinity()
+    }
 }

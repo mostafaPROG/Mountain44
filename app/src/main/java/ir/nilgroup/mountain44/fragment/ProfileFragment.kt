@@ -1,10 +1,11 @@
 package ir.nilgroup.mountain44.fragment
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.Gravity
 import android.view.LayoutInflater
-import android.widget.Button
-import android.widget.FrameLayout
-import android.widget.ImageView
+import android.view.Menu
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.tabs.TabLayout
 import ir.nilgroup.mountain44.R
+import ir.nilgroup.mountain44.activities.AddEventActivity
 import ir.nilgroup.mountain44.adapter.TableViewAdapter
 import ir.nilgroup.mountain44.base.RegisterNumber
 import ir.nilgroup.mountain44.fragment.profileFragment.*
@@ -26,8 +28,8 @@ class ProfileFragment : AppCompatActivity() {
     private lateinit var tabLayoutGroup: TabLayout
     private lateinit var tabLayoutEvent: TabLayout
     private lateinit var frameLayout: FrameLayout
-    lateinit var fragment:Fragment
-    lateinit var fragmentEvent:Fragment
+    lateinit var fragment: Fragment
+    lateinit var fragmentEvent: Fragment
     var fragmentManager: FragmentManager? = null
     var fragmentTransaction: FragmentTransaction? = null
 
@@ -40,8 +42,13 @@ class ProfileFragment : AppCompatActivity() {
         frameLayout = findViewById(R.id.frameInfoProfiel)
 
 
-        fragment = InfoFragmentProfile()
-        fragmentManager =supportFragmentManager
+        findViewById<Button>(R.id.addEventBtn).setOnClickListener {
+            startActivity(Intent(this, AddEventActivity::class.java))
+        }
+
+
+        fragment = MemberProfileFragment()
+        fragmentManager = supportFragmentManager
         fragmentTransaction = fragmentManager!!.beginTransaction()
         fragmentTransaction!!.replace(R.id.frameInfoProfiel, fragment)
         fragmentTransaction!!.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
@@ -52,7 +59,7 @@ class ProfileFragment : AppCompatActivity() {
         fragmentTransaction!!.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
         fragmentTransaction!!.commit()
 
-        val tab:TabLayout.Tab = tabLayoutGroup.getTabAt(1)!!
+        val tab: TabLayout.Tab = tabLayoutGroup.getTabAt(1)!!
         tab.select()
 
         tabLayoutGroup!!.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
@@ -123,10 +130,21 @@ class ProfileFragment : AppCompatActivity() {
             builder.show()
             builder.setCancelable(true)
         }
+        findViewById<ImageButton>(R.id.backProfileFragment).setOnClickListener {
+            onBackPressed()
+        }
+        findViewById<ImageButton>(R.id.optionMenu).setOnClickListener {
+            val popupMenu = PopupMenu(this@ProfileFragment, findViewById<ImageButton>(R.id.optionMenu), Gravity.RIGHT)
+            menuInflater.inflate(R.menu.option_menu_prof, popupMenu.menu)
+            popupMenu.setOnMenuItemClickListener {
+                Toast.makeText(this@ProfileFragment, "You Clicked : " + it.title, Toast.LENGTH_SHORT).show()
+                return@setOnMenuItemClickListener true
+            }
+            popupMenu.show()
+
+        }
+
 
     }
-
-
-
 
 }

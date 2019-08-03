@@ -3,7 +3,7 @@
                                                      xmlns:app="http://schemas.android.com/apk/res-auto"
                                                      android:id="@+id/coordinatorLayout"
                                                      android:layout_width="match_parent"
-                                                     android:layout_height="match_parent">
+                                                     android:layout_height="match_parent" android:layoutDirection="ltr">
     <com.google.android.material.appbar.AppBarLayout android:id="@+id/appbar" android:visibility="visible"
                                                      android:layout_width="match_parent"
                                                      android:layout_height="wrap_content">
@@ -13,7 +13,8 @@
                                                                     app:layout_scrollFlags="scroll|enterAlways|exitUntilCollapsed"
                                                                     app:toolbarId="@+id/toolsToolbarL">
             <androidx.appcompat.widget.Toolbar android:id="@+id/toolsToolbarL" android:layout_width="match_parent"
-                                               android:layout_height="?attr/actionBarSize" app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+                                               android:layout_height="?attr/actionBarSize"
+                                               app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
                                                app:navigationIcon="@drawable/ic_arrow_back_black_24dp"/>
             <TextView android:textSize="22sp" android:textColor="@color/backgroundWhite" android:layout_gravity="center"
                       android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ابزار ها"/>
@@ -154,7 +155,8 @@
                               android:id="@+id/textView20" android:layout_width="wrap_content"
                               android:layout_height="wrap_content" android:layout_marginTop="8dp"
                               android:text="دمای هوا :" android:layout_marginEnd="16dp"
-                              app:layout_constraintBottom_toTopOf="@+id/textView21" app:layout_constraintEnd_toEndOf="parent"
+                              app:layout_constraintBottom_toTopOf="@+id/textView21"
+                              app:layout_constraintEnd_toEndOf="parent"
                               app:layout_constraintTop_toTopOf="parent"/>
                     <TextView android:textColor="@color/backgroundWhite" android:id="@+id/textView21"
                               android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -259,8 +261,10 @@
                                  android:visibility="visible" android:layout_width="0dp" android:layout_height="0dp"
                                  android:layout_marginTop="8dp" android:layout_marginBottom="8dp"
                                  android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
-                                 app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+                                 app:layout_constraintBottom_toBottomOf="parent"
+                                 app:layout_constraintEnd_toEndOf="parent"
+                                 app:layout_constraintStart_toStartOf="parent"
+                                 app:layout_constraintTop_toTopOf="parent"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
             <include layout="@layout/card_height"/>
@@ -278,7 +282,8 @@
                               android:id="@+id/timeCardL" android:layout_width="wrap_content"
                               android:layout_height="wrap_content" android:layout_marginTop="8dp"
                               android:layout_marginBottom="8dp" android:layout_marginStart="24dp"
-                              app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent"
+                              app:layout_constraintBottom_toBottomOf="parent"
+                              app:layout_constraintStart_toStartOf="parent"
                               app:layout_constraintTop_toTopOf="parent"/>
                     <TextView android:textSize="18sp" android:textColor="@color/backgroundWhite"
                               android:id="@+id/dateCardL" android:layout_width="wrap_content"
@@ -286,7 +291,8 @@
                               android:layout_marginBottom="8dp" android:layout_marginStart="8dp"
                               android:layout_marginEnd="24dp" app:layout_constraintBottom_toBottomOf="parent"
                               app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1"
-                              app:layout_constraintStart_toEndOf="@+id/timeCardL" app:layout_constraintTop_toTopOf="parent"/>
+                              app:layout_constraintStart_toEndOf="@+id/timeCardL"
+                              app:layout_constraintTop_toTopOf="parent"/>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView android:id="@+id/toolsCardL" android:visibility="visible"

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:aapt="http://schemas.android.com/aapt"
+                                                   android:layout_gravity="center"
+                                                   android:background="@drawable/background_recived"
+                                                   android:layout_width="wrap_content"
+                                                   android:layout_height="wrap_content">
+    <TextView android:textSize="18sp" android:textColor="@color/darkGray" android:id="@+id/textView17"
+              android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+              android:text="شماره تلفن های ضروری" android:layout_marginStart="8dp" android:layout_marginEnd="8dp"
+              app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.core.widget.NestedScrollView android:id="@+id/nestedScrollView3" android:layout_width="match_parent"
+                                           android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                                           android:textDirection="rtl" android:layoutDirection="ltr"
+                                           android:layout_marginStart="24dp" android:layout_marginEnd="24dp"
+                                           app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                                           app:layout_constraintTop_toBottomOf="@+id/textView17">
+        <RadioGroup android:orientation="vertical" android:id="@+id/radioGroupEmergency" android:paddingLeft="20dp"
+                    android:paddingRight="20dp" android:layout_width="match_parent" android:layout_height="100dp">
+            <RadioButton android:textColor="@color/colorPrimaryDark" android:gravity="right"
+                         android:id="@+id/radioButton3" android:tag="112" android:layout_width="match_parent"
+                         android:layout_height="wrap_content" android:checked="true" android:text="هلال احمر"/>
+            <RadioButton android:textColor="@color/colorPrimaryDark"
+                         android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/radioButton7"
+                         android:tag="110" android:layout_width="match_parent" android:layout_height="wrap_content"
+                         android:text="پلیس"/>
+            <RadioButton android:textColor="@color/colorPrimaryDark"
+                         android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/radioButton6"
+                         android:tag="115" android:layout_width="match_parent" android:layout_height="wrap_content"
+                         android:text="اورژانس"/>
+            <RadioButton android:textColor="@color/colorPrimaryDark"
+                         android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/radioButton8"
+                         android:tag="125" android:layout_width="match_parent" android:layout_height="wrap_content"
+                         android:text="آتش نشانی"/>
+            <RadioButton android:textColor="@color/colorPrimaryDark"
+                         android:gravity="right|center_vertical|center_horizontal|center"
+                         android:id="@+id/radioButton10" android:tag="134" android:layout_width="match_parent"
+                         android:layout_height="wrap_content" android:text="هواشناسی"/>
+            <RadioButton android:textColor="@color/colorPrimaryDark"
+                         android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/radioButton4"
+                         android:tag="141" android:layout_width="match_parent" android:layout_height="wrap_content"
+                         android:text="پلیس راه"/>
+            <RadioButton android:textColor="@color/colorPrimaryDark"
+                         android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/radioButton9"
+                         android:tag="1504" android:layout_width="match_parent" android:layout_height="wrap_content"
+                         android:text="حفظ منابع طبیعی "/>
+            <RadioButton android:textColor="@color/colorPrimaryDark"
+                         android:gravity="right|center_vertical|center_horizontal|center"
+                         android:id="@+id/radioButton11" android:tag="09669" android:layout_width="match_parent"
+                         android:layout_height="wrap_content" android:text="گردشگری استانها"/>
+            <RadioButton android:textColor="@color/colorPrimaryDark"
+                         android:gravity="right|center_vertical|center_horizontal|center"
+                         android:id="@+id/radioButton12" android:tag="096440" android:layout_width="match_parent"
+                         android:layout_height="wrap_content" android:text="امداد خودرو ایران خودرو "/>
+            <RadioButton android:textColor="@color/colorPrimaryDark"
+                         android:gravity="right|center_vertical|center_horizontal|center" android:id="@+id/radioButton5"
+                         android:tag="096550" android:layout_width="match_parent" android:layout_height="wrap_content"
+                         android:text="امداد خودرو سایپا و پارس خودرو"/>
+        </RadioGroup>
+    </androidx.core.widget.NestedScrollView>
+    <Button android:textSize="24sp" android:textColor="@color/backgroundWhite" android:gravity="center"
+            android:id="@+id/callBtnDialog" android:background="@color/green"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" android:layout_marginTop="16dp"
+            android:text="تماس"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nestedScrollView3" app:layout_constraintVertical_bias="0"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

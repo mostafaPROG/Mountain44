@@ -2,8 +2,9 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
                                                      xmlns:app="http://schemas.android.com/apk/res-auto"
                                                      xmlns:aapt="http://schemas.android.com/aapt"
-                                                     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-                                                     android:layout_height="match_parent">
+                                                     xmlns:tools="http://schemas.android.com/tools"
+                                                     android:layout_width="match_parent"
+                                                     android:layout_height="match_parent" android:layoutDirection="ltr">
     <com.google.android.material.appbar.AppBarLayout android:id="@+id/appbar" android:layout_width="match_parent"
                                                      android:layout_height="wrap_content" app:elevation="0dp">
         <com.google.android.material.appbar.CollapsingToolbarLayout android:id="@+id/collapsingToolbarL"
@@ -91,7 +92,8 @@
                 <TextView android:textSize="14sp" android:textColor="@color/backgroundWhite"
                           android:id="@+id/stateCardGroup" android:layout_width="wrap_content"
                           android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:text="26"
-                          app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="@+id/textView18"
+                          app:layout_constraintBottom_toBottomOf="parent"
+                          app:layout_constraintEnd_toEndOf="@+id/textView18"
                           app:layout_constraintStart_toStartOf="@+id/textView18"
                           app:layout_constraintTop_toBottomOf="@+id/textView18" app:layout_constraintVertical_bias="0"/>
                 <iammert.com.view.scalinglib.ScalingLayout android:id="@+id/scalingLayout" android:layout_width="56dp"
@@ -158,7 +160,8 @@
                                android:tint="@color/colorRed" android:layout_marginStart="8dp"
                                android:layout_marginEnd="16dp" app:layout_constraintBottom_toBottomOf="parent"
                                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1"
-                               app:layout_constraintStart_toEndOf="@+id/button6" app:layout_constraintTop_toTopOf="parent"/>
+                               app:layout_constraintStart_toEndOf="@+id/button6"
+                               app:layout_constraintTop_toTopOf="parent"/>
                     <Button android:textSize="12sp" android:textColor="@color/backgroundWhite" android:id="@+id/button6"
                             android:background="@drawable/background" android:paddingLeft="8dp"
                             android:backgroundTint="@color/green"

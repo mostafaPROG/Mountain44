@@ -38,7 +38,7 @@ class GalleryFragmentHorizonal : Fragment() {
 
         recyclerView = view.findViewById(R.id.recyclerGalleryGroup)
         recyclerView.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,true)
-        adapter = GalleryAdapter(list, context!!)
+        adapter = GalleryAdapter(list, context!!,1)
         val itemDecorator = DividerItemDecoration(context!!, DividerItemDecoration.HORIZONTAL)
         itemDecorator.setDrawable(ContextCompat.getDrawable(context!!, R.drawable.divider)!!)
         recyclerView.addItemDecoration(itemDecorator)

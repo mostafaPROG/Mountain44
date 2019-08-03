@@ -3,7 +3,7 @@
               xmlns:app="http://schemas.android.com/apk/res-auto"
               android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent" android:layoutDirection="ltr">
 
     <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
@@ -13,11 +13,11 @@
             app:layout_scrollFlags="scroll|enterAlways"
             app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
             android:id="@+id/courseToolbar">
-            <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-                      android:text="دوره های آموزشی"
-                      android:textSize="18sp"
-                      android:textColor="@color/backgroundWhite" android:gravity="center"
-                      android:fontFamily="@font/yekan"/>
+        <TextView android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:text="دوره های آموزشی"
+                  android:textSize="18sp"
+                  android:textColor="@color/backgroundWhite" android:gravity="center"
+                  android:fontFamily="@font/yekan"/>
     </androidx.appcompat.widget.Toolbar>
 
     <com.nanbox.parallaxrecyclerview.ParallaxRecyclerView
