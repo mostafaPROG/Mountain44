@@ -5,7 +5,7 @@
                                                    android:layout_width="match_parent"
                                                    android:layout_height="wrap_content">
 
-    <com.google.android.material.card.MaterialCardView
+    <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="250dp"
             app:cardCornerRadius="6dp"
@@ -46,7 +46,8 @@
                         android:ellipsize="end"
                         android:layout_height="wrap_content" android:id="@+id/descriptCourseCard"
                         android:gravity="center"
-                        android:textColor="@color/black" android:textSize="16sp"
+                        android:justificationMode="inter_word"
+                        android:textColor="@color/black" android:textSize="14sp"
                         android:layout_marginBottom="8dp"
                         android:layout_marginLeft="8dp" android:layout_marginRight="8dp"
                         android:layout_marginTop="8dp"/>
@@ -63,5 +64,5 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </com.google.android.material.card.MaterialCardView>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

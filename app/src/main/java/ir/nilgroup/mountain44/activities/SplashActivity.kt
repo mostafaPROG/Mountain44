@@ -20,7 +20,7 @@ class SplashActivity : AppCompatActivity() {
         textview.typeface = Typeface.createFromAsset(assets, "font/iransansweb_medium.ttf")
 
         Handler().postDelayed({
-            startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
+            startActivity(Intent(this@SplashActivity, MainActivity::class.java))
         }, 3000)
 
     }

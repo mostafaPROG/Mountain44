@@ -23,10 +23,11 @@
                                                                android:layout_height="match_parent">
                 <ImageView android:id="@+id/imageView2" android:drawingCacheQuality="auto" android:layout_width="0dp"
                            android:layout_height="0dp" android:layout_marginTop="64dp" android:src="@drawable/b_profile"
-                           android:scaleType="fitXY" android:tint="@color/colorPrimaryLight"
-                           app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                           android:scaleType="fitXY"
+                        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
                            app:layout_constraintHorizontal_bias="0" app:layout_constraintStart_toStartOf="parent"
-                           app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0"/>
+                           app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0"
+                        app:tint="@color/colorPrimaryLight" />
                 <com.mikhaellopez.circularimageview.CircularImageView android:id="@+id/circularImageView"
                                                                       android:drawingCacheQuality="auto"
                                                                       android:layout_width="100dp"
@@ -157,11 +158,12 @@
                     <ImageView android:id="@+id/imageView14" android:layout_width="wrap_content"
                                android:layout_height="wrap_content" android:layout_marginTop="8dp"
                                android:layout_marginBottom="8dp" android:src="@drawable/ic_favorite_border_black_24dp"
-                               android:tint="@color/colorRed" android:layout_marginStart="8dp"
+                            android:layout_marginStart="8dp"
                                android:layout_marginEnd="16dp" app:layout_constraintBottom_toBottomOf="parent"
                                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1"
                                app:layout_constraintStart_toEndOf="@+id/button6"
-                               app:layout_constraintTop_toTopOf="parent"/>
+                               app:layout_constraintTop_toTopOf="parent"
+                            app:tint="@color/colorRed" />
                     <Button android:textSize="12sp" android:textColor="@color/backgroundWhite" android:id="@+id/button6"
                             android:background="@drawable/background" android:paddingLeft="8dp"
                             android:backgroundTint="@color/green"

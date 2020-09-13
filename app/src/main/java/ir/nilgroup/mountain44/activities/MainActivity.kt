@@ -71,22 +71,21 @@ class MainActivity : AppCompatActivity() {
             Logger.getLogger("offset").info("offset is : $i     total is :${appBarLayout.totalScrollRange}")
             var newOffset = abs(i)
             when {
-                newOffset > 500 -> {
-//                    constBig.visibility = View.GONE
-//                    constSm.visibility = View.VISIBLE
-//                    fadeOut(constBig)
+                newOffset > 500 && newOffset < 1000 -> {
+
                     if (newOffset != appBarLayout.totalScrollRange){
                         constSm.visibility = View.VISIBLE
                         fadeIn(constSm)
                     }
+                    loginBtn.visibility=View.INVISIBLE
                 }
                 newOffset < 100 -> {
-//                    constBig.visibility = View.VISIBLE
-//                    constSm.visibility = View.GONE
-//                fadeIn(constBig)
                     constSm.visibility = View.INVISIBLE
+                    loginBtn.visibility=View.VISIBLE
                 }
-
+                newOffset > 1000 -> {
+                    loginBtn.visibility=View.VISIBLE
+                }
             }
         })
 

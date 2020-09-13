@@ -55,7 +55,7 @@
                         >
                             <ImageView android:layout_width="60dp" android:layout_height="60dp"
                                        android:src="@drawable/ic_teach_black_24dp"
-                                       android:tint="@color/colorPrimaryDark2"/>
+                                    app:tint="@color/colorPrimaryDark2" />
                             <TextView android:textSize="11sp" android:textColor="@color/colorPrimaryDark2"
                                       android:layout_width="match_parent" android:layout_height="match_parent"
                                       android:text="دوره های آموزشی" android:background="@color/colorPrimaryGlass"
@@ -74,7 +74,7 @@
                                       android:layout_width="match_parent" android:layout_height="match_parent">
                             <ImageView android:layout_width="60dp" android:layout_height="60dp"
                                        android:src="@drawable/ic_apps_black_24dp"
-                                       android:tint="@color/colorPrimaryDark2"/>
+                                    app:tint="@color/colorPrimaryDark2" />
                             <TextView android:textColor="@color/colorPrimaryDark2" android:layout_width="match_parent"
                                       android:layout_height="match_parent" android:text="ابزار ها"
                                       android:gravity="center" android:background="@color/colorPrimaryGlass"/>
@@ -93,7 +93,7 @@
                                       android:layout_width="match_parent" android:layout_height="match_parent">
                             <ImageView android:layout_width="60dp" android:layout_height="60dp"
                                        android:src="@drawable/ic_map_black_24dp"
-                                       android:tint="@color/colorPrimaryDark2"/>
+                                    app:tint="@color/colorPrimaryDark2" />
                             <TextView android:textColor="@color/colorPrimaryDark2" android:layout_width="match_parent"
                                       android:layout_height="match_parent" android:text="نقشه گردی"
                                       android:gravity="center" android:background="@color/colorPrimaryGlass"/>
@@ -116,7 +116,7 @@
                                       android:layout_width="match_parent" android:layout_height="match_parent">
                             <ImageView android:layout_width="60dp" android:layout_height="60dp"
                                        android:src="@drawable/ic_people_black_24dp"
-                                       android:tint="@color/colorPrimaryDark2"/>
+                                    app:tint="@color/colorPrimaryDark2" />
                             <TextView android:textColor="@color/colorPrimaryDark2" android:layout_width="match_parent"
                                       android:layout_height="match_parent" android:text="گروه ها"
                                       android:gravity="center" android:background="@color/colorPrimaryGlass"/>
@@ -136,7 +136,7 @@
                                       android:layout_width="match_parent" android:layout_height="match_parent">
                             <ImageView android:layout_width="60dp" android:layout_height="60dp"
                                        android:src="@drawable/ic_account_circle_black_24dp"
-                                       android:tint="@color/colorPrimaryDark2"/>
+                                    app:tint="@color/colorPrimaryDark2" />
                             <TextView android:textColor="@color/colorPrimaryDark2" android:layout_width="match_parent"
                                       android:layout_height="match_parent" android:text="پروفایل"
                                       android:gravity="center" android:background="@color/colorPrimaryGlass"/>
@@ -156,7 +156,7 @@
                                       android:layout_width="match_parent" android:layout_height="match_parent">
                             <ImageView android:layout_width="60dp" android:layout_height="60dp"
                                        android:src="@drawable/ic_store_black_24dp"
-                                       android:tint="@color/colorPrimaryDark2"/>
+                                    app:tint="@color/colorPrimaryDark2" />
                             <TextView android:textColor="@color/colorPrimaryDark2" android:layout_width="match_parent"
                                       android:layout_height="match_parent" android:text="فروشگاه"
                                       android:gravity="center" android:background="@color/colorPrimaryGlass"/>

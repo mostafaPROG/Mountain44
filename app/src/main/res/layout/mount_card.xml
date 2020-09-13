@@ -1,41 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_margin="8dp"
         app:cardCornerRadius="8dp"
-        app:cardElevation="0dp"
-        android:layout_margin="8dp" android:layout_height="180dp">
+        app:cardElevation="0dp">
+
     <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="@drawable/back_stroke_pr3"
+            android:backgroundTint="@color/colorPrimary"
+            android:orientation="horizontal">
+
         <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="0dp"
-                android:layout_height="match_parent" android:layout_weight="1">
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:padding="@dimen/material_size_2"
+                android:orientation="vertical">
+
             <ImageView
+                    android:id="@+id/imageView6"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" android:src="@drawable/kooh2"
-                    android:id="@+id/imageView6" android:layout_weight="1" android:scaleType="centerCrop"/>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/kooh2" />
         </LinearLayout>
+
         <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="0dp"
-                android:layout_height="match_parent" android:layout_weight="1" android:padding="5dp"
-                android:gravity="center">
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="5dp">
+
             <TextView
+                    android:id="@+id/textView9"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/textView9"
-                    android:text="کوه کلک چال، یخچال پربرف تهران" android:textColor="@color/black"
-                    android:fontFamily="@font/iransansweb_bold"/>
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/material_size_4"
+                    android:gravity="center"
+                    android:fontFamily="@font/iransansweb_bold"
+                    android:text="کوه کلک چال، یخچال پربرف تهران"
+                    android:textColor="@color/colorPrimary" />
+
             <TextView
-                    android:text="کوه کلک چال یکی از کوه‌های شمال تهران است که از سه مسیر بوستان جمشیدیه، گلاب‌دره و دره وزباد، قابل دسترسی می‌باشد. مرتفع‌ترین نقطه کوه کلک چال قله کلک‌چال نام دارد که ارتفاع آن ۳۳۵۰ متر از سطح دریا است."
+                    android:id="@+id/textView13"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:id="@+id/textView13" android:textSize="12sp"
-                    android:ellipsize="end" android:ems="10" android:maxLines="5"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical|end"
-                    android:gravity="right" android:foregroundGravity="fill" android:layout_marginTop="8dp"
-                    android:fontFamily="@font/iransansweb_light"/>
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:paddingHorizontal="@dimen/material_size_4"
+                    android:justificationMode="inter_word"
+                    android:ems="10"
+                    android:fontFamily="@font/iransansweb_light"
+                    android:foregroundGravity="fill"
+                    android:gravity="right"
+                    android:maxLines="5"
+                    android:text="کوه کلک چال یکی از کوه‌های شمال تهران است که از سه مسیر بوستان جمشیدیه، گلاب‌دره و دره وزباد، قابل دسترسی می‌باشد. مرتفع‌ترین نقطه کوه کلک چال قله کلک‌چال نام دارد که ارتفاع آن ۳۳۵۰ متر از سطح دریا است."
+                    android:textSize="12sp" />
         </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

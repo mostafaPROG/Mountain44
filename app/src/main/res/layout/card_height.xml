@@ -18,9 +18,10 @@
                                                        android:layout_height="match_parent">
         <ImageView android:id="@+id/imageView11" android:layout_width="80dp" android:layout_height="80dp"
                    android:layout_marginTop="4dp" android:src="@drawable/mountain_height"
-                   android:tint="@color/backgroundWhite" app:layout_constraintEnd_toEndOf="@+id/textView16"
+                app:layout_constraintEnd_toEndOf="@+id/textView16"
                    app:layout_constraintStart_toStartOf="@+id/textView16"
-                   app:layout_constraintTop_toBottomOf="@+id/textView16"/>
+                   app:layout_constraintTop_toBottomOf="@+id/textView16"
+                app:tint="@color/backgroundWhite" />
         <TextView android:textSize="16sp" android:textColor="@color/backgroundWhite" android:id="@+id/textView16"
                   android:layout_width="wrap_content" android:layout_height="wrap_content"
                   android:layout_marginTop="8dp" android:text="ارتفاع از سطح دریا" android:layout_marginStart="8dp"

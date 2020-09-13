@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import ir.nilgroup.mountain44.R
 
 class RegisterGroup : AppCompatActivity() {
@@ -14,10 +15,11 @@ class RegisterGroup : AppCompatActivity() {
 
 
         findViewById<Button>(R.id.saveRegister).setOnClickListener {
-            startActivity(Intent(this@RegisterGroup,MainActivity::class.java))
+            Toast.makeText(this,"با موفقیت ذخیره شد",Toast.LENGTH_SHORT)
+            finish()
         }
         findViewById<Button>(R.id.cancelRegister).setOnClickListener {
-            startActivity(Intent(this@RegisterGroup,MainActivity::class.java))
+            finish()
         }
     }
 }
