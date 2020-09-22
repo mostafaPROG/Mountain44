@@ -23,11 +23,13 @@ class GroupFragment : AppCompatActivity() {
     private lateinit var title: TextView
     private lateinit var searchView: SearchView
     private lateinit var backMenu: ImageButton
-
+    private var itemIndex = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.group_layout)
+
+        itemIndex=intent.getIntExtra("item",1)
 
         tabLayout = findViewById(R.id.tabLayout)
         viewPager = findViewById(R.id.viewpager_group)
@@ -45,11 +47,11 @@ class GroupFragment : AppCompatActivity() {
         val tabIcon: ArrayList<Int> = arrayListOf(
             R.drawable.ic_info_outline_black_24dp,
             R.drawable.ic_people_black_24dp,
-            R.drawable.ic_person_black_24dp
+            R.drawable.ic_001_chat
         )
 
         viewPager.adapter = tabAdapter
-        viewPager.currentItem = 3
+        viewPager.currentItem = itemIndex
 
         tabLayout.setupWithViewPager(viewPager)
 

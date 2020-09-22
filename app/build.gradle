@@ -11,7 +11,7 @@ android {
     buildToolsVersion '29.0.2'
     defaultConfig {
         applicationId "ir.nilgroup.mountain44"
-        minSdkVersion 19
+        minSdkVersion 18
         targetSdkVersion 29
         multiDexEnabled true
         versionCode 1
@@ -27,6 +27,9 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+    viewBinding {
+        enabled = true
     }
 }
 
@@ -61,7 +64,6 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'com.skyline.widget:round-corner-layout:1.0.1'
-    implementation 'com.rany.albeg.wein:spring-fab-menu:1.0.1'
     implementation 'com.getbase:floatingactionbutton:1.10.1'
     implementation 'com.nanbox:ParallaxRecyclerView:1.1.0'
 
@@ -82,6 +84,8 @@ dependencies {
 
     implementation 'com.aminography:primedatepicker:1.0.6'
     implementation 'com.aminography:primecalendar:1.2.13'
+
+    implementation 'com.github.smarteist:autoimageslider:1.3.9'
 
     //Typer animation textview
     implementation "com.hanks:htextview-typer:$htextview_version"

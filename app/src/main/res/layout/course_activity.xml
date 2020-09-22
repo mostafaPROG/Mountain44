@@ -8,7 +8,7 @@
     <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
+            android:background="@color/backgroundWhite"
             android:overScrollMode="ifContentScrolls"
             app:layout_scrollFlags="scroll|enterAlways"
             app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
@@ -16,7 +16,10 @@
         <TextView android:layout_width="match_parent" android:layout_height="match_parent"
                   android:text="دوره های آموزشی"
                   android:textSize="18sp"
-                  android:textColor="@color/backgroundWhite" android:gravity="center"
+                  android:textColor="@color/colorPrimaryDark2" android:gravity="center|right"
+                android:paddingHorizontal="@dimen/material_size_8"
+                android:drawableRight="@drawable/ic_teach_black_24dp"
+                android:drawablePadding="@dimen/material_size_8"
                   android:fontFamily="@font/yekan"/>
     </androidx.appcompat.widget.Toolbar>
 

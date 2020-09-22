@@ -1,76 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-                                   xmlns:app="http://schemas.android.com/apk/res-auto"
-                                   xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-                                   android:layout_height="250dp"
-                                   app:cardCornerRadius="4dp"
-                                   app:cardElevation="0dp"
-                                   app:cardMaxElevation="0dp">
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
         <ImageView
+                android:id="@+id/eventImageMain"
                 android:layout_width="0dp"
-                android:layout_height="120dp" android:src="@drawable/event_back"
-                android:id="@+id/eventImageMain" app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-                android:scaleType="centerCrop"/>
-        <Button
-                android:text="تور 3.5 روزه دره نوردی تنگه رغز"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:id="@+id/eventNameMain" android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/eventImageMain"
-                app:layout_constraintBottom_toBottomOf="@+id/eventImageMain"
-                android:backgroundTint="@color/yellow"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/event_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="#7C000000"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+                android:id="@+id/eventNameMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/material_size_32"
+                android:justificationMode="inter_word"
+                android:gravity="center"
+                android:layout_marginHorizontal="@dimen/material_size_12"
+                android:background="@color/transparent"
+                android:fontFamily="@font/iransansweb_medium"
                 android:paddingHorizontal="12dp"
+                android:text="تور 3.5 روزه دره نوردی تنگه رغز"
+                android:textColor="@color/white"
+                android:textSize="26sp"
                 app:layout_constraintEnd_toEndOf="@+id/eventImageMain"
                 app:layout_constraintStart_toStartOf="@+id/eventImageMain"
-                android:background="@drawable/background" android:textSize="20sp" android:fontFamily="@font/yekan"
-                android:textColor="@color/white"/>
+                app:layout_constraintTop_toTopOf="@+id/eventImageMain" />
+
         <TextView
+                android:id="@+id/eventDateMain"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:gravity="left"
+                android:paddingLeft="@dimen/material_size_8"
                 android:text="۲۸ مرداد تا ۳۱ مرداد"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/eventDateMain" app:layout_constraintStart_toStartOf="@+id/eventNameMain"
-                app:layout_constraintEnd_toEndOf="@+id/eventNameMain" android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@+id/eventNameMain" android:textSize="12sp"
-                android:textColor="@color/blue_dark"/>
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/eventStateMain"
+                app:layout_constraintStart_toStartOf="@+id/eventStateMain" />
+
         <TextView
-                android:text="وضعیت"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/textView51"
-                app:layout_constraintTop_toBottomOf="@+id/eventDateMain" app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginStart="8dp"
-                android:textSize="12sp" android:textColor="@color/gray" app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintHorizontal_chainStyle="spread" android:layout_marginEnd="8dp"
-                app:layout_constraintEnd_toStartOf="@+id/eventDateMain"/>
-        <TextView
-                android:text="پیش رو"
-                android:layout_width="wrap_content"
-                android:layout_height="32dp"
                 android:id="@+id/eventStateMain"
-                app:layout_constraintTop_toBottomOf="@+id/textView51"
-                app:layout_constraintStart_toStartOf="@+id/textView51"
-                android:paddingHorizontal="12dp"
-                android:backgroundTint="@color/green"
-                app:layout_constraintEnd_toEndOf="@+id/textView51" android:background="@drawable/back_stroke_pr2"
-                android:gravity="center" android:textColor="@color/green"
-                android:fontFamily="@font/iransansweb_medium" android:layout_marginBottom="8dp"
-                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="0.0"/>
-        <Button
-                android:text="ثبت نام"
                 android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/background_green"
+                android:fontFamily="@font/iransansweb_medium"
+                android:gravity="center"
+                android:paddingHorizontal="@dimen/material_size_12"
+                android:text="پیش رو"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/registerEventMain"
+                app:layout_constraintStart_toStartOf="@+id/eventImageMain"
+                app:layout_constraintTop_toTopOf="@+id/registerEventMain" />
+
+        <Button
                 android:id="@+id/registerEventMain"
-                app:layout_constraintBottom_toBottomOf="@+id/eventStateMain"
-                android:background="@drawable/background_login_text" android:textColor="@color/white"
-                android:layout_height="40dp" android:layout_marginEnd="8dp" app:layout_constraintEnd_toEndOf="parent"
-                android:layout_marginStart="8dp"
-                app:layout_constraintTop_toTopOf="@+id/eventStateMain"
-                android:backgroundTint="@color/colorPrimary"
-                app:layout_constraintStart_toEndOf="@+id/eventDateMain"/>
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/background_blue"
+                android:text="ثبت نام"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+<!--        <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:background="@drawable/back_stroke_pr3" />-->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

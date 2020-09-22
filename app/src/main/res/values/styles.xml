@@ -14,16 +14,19 @@
         <item name="android:fontFamily">@font/yekan</item>
         <item name="android:textSize">42sp</item>
     </style>
+
     <style name="textAppearanceCollapsed" parent="TextAppearance.AppCompat.Title">
         <item name="android:textColor">@color/backgroundWhite</item>
         <item name="android:fontFamily">@font/yekan</item>
         <item name="android:textSize">18sp</item>
     </style>
+
     <style name="SearchView">
         <item name="android:textColor">@color/black</item>
         <item name="android:textColorHint">@color/gray</item>
         <item name="android:hint">جست و جوی قله ها</item>
     </style>
+
     <style name="itemTextApp" parent="Widget.Design.TabLayout">
         <item name="android:fontFamily">@font/yekan</item>
     </style>
@@ -32,4 +35,9 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 </resources>

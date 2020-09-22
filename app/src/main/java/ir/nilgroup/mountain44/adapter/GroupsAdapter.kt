@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -25,7 +26,7 @@ class GroupsAdapter(val arrayList: ArrayList<GroupData>, val context: Context) :
         val nameGroup: TextView = itemView.findViewById(R.id.nameCardGroupFav)
         val rank: TextView = itemView.findViewById(R.id.rankCardGroupFav)
         val member: TextView = itemView.findViewById(R.id.memCardGroupFav)
-        val image:CircularImageView = itemView.findViewById(R.id.imageGroupCardFav)
+        val image: CircularImageView = itemView.findViewById(R.id.imageGroupCardFav)
     }
 
     class FilterViewholder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -44,12 +45,14 @@ class GroupsAdapter(val arrayList: ArrayList<GroupData>, val context: Context) :
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
 
         if (viewType == filterType) {
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.filter_group_card, parent, false)
+            val view = LayoutInflater.from(parent.context)
+                .inflate(R.layout.filter_group_card, parent, false)
             return FilterViewholder(view)
-        }else{
-            val view = LayoutInflater.from(parent.context).inflate(R.layout.group_card_fav,parent,false)
-            view.findViewById<CircularImageView>(R.id.imageGroupCardFav).setOnClickListener {
-                context.startActivity(Intent(context,GroupProfileActivity::class.java))
+        } else {
+            val view =
+                LayoutInflater.from(parent.context).inflate(R.layout.group_card_fav, parent, false)
+            view.findViewById<ImageView>(R.id.imageGroupCardFav).setOnClickListener {
+                context.startActivity(Intent(context, GroupProfileActivity::class.java))
             }
             return ItemViewholder(view)
         }
@@ -60,10 +63,10 @@ class GroupsAdapter(val arrayList: ArrayList<GroupData>, val context: Context) :
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        if (holder is ItemViewholder){
+        if (holder is ItemViewholder) {
             holder.member.text = arrayList[position].members.toString()
-            holder.rank.text=arrayList[position].rank.toString()
-            holder.nameGroup.text=arrayList[position].nameId
+            holder.rank.text = arrayList[position].rank.toString()
+            holder.nameGroup.text = arrayList[position].nameId
             val stringBuilder = "logo1"
             val id = context.resources.getIdentifier(stringBuilder, "drawable", context.packageName)
             Glide.with(context).load(id).into(holder.image)

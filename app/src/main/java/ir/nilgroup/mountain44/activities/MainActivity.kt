@@ -4,13 +4,15 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
+import android.os.Handler
 import android.view.Gravity
 import android.view.MenuItem
 import android.view.View
 import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
-import android.widget.LinearLayout
+import android.widget.HorizontalScrollView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -25,6 +27,9 @@ import ir.nilgroup.mountain44.R
 import ir.nilgroup.mountain44.adapter.EventFavAdapter
 import ir.nilgroup.mountain44.adapter.GroupFavAdapter
 import ir.nilgroup.mountain44.adapter.MountFavAdapter
+import ir.nilgroup.mountain44.databinding.ActivityMain3Binding
+import ir.nilgroup.mountain44.databinding.ActivityMainBinding
+import ir.nilgroup.mountain44.databinding.ContentScrollingBinding
 import ir.nilgroup.mountain44.fragment.AppFragment
 import ir.nilgroup.mountain44.fragment.GroupFragment
 import ir.nilgroup.mountain44.fragment.MapFragment
@@ -45,21 +50,35 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarLayout: AppBarLayout
     private lateinit var nestedScrollView: NestedScrollView
     private lateinit var constBig: ConstraintLayout
-    private lateinit var constSm: ConstraintLayout
     private lateinit var loginBtn: TextView
+    private var countExit = 0
+    private lateinit var root:ActivityMainBinding
+    private lateinit var root3:ContentScrollingBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        root = ActivityMainBinding.inflate(layoutInflater)
+        root3 = ContentScrollingBinding.inflate(layoutInflater)
+        setContentView(root.root)
 
-        constSm = findViewById(R.id.layout_constraintSm)
-        constBig = findViewById(R.id.layout_constraintBig)
-        nestedScrollView = findViewById(R.id.nestedScrollView)
-        loginBtn = findViewById(R.id.registerGroupMain)
-        appBarLayout = findViewById(R.id.appbar)
+        constBig = root!!.layoutConstraintBig
+        nestedScrollView = root!!.nestedScrollView
+        loginBtn = root!!.registerGroupMain
+        appBarLayout = root!!.appbar
 
         loginBtn.setOnClickListener {
             startActivity(Intent(this@MainActivity, RegisterGroup::class.java))
+        }
+
+        root.addEventHome.setOnClickListener {
+            startActivity(Intent(this@MainActivity,AddEventActivity::class.java))
+        }
+
+        root.notificationHome.setOnClickListener {
+            startActivity(Intent(this@MainActivity,GroupFragment::class.java).putExtra("item",0))
+        }
+        root.chatGroupHome.setOnClickListener {
+            startActivity(Intent(this@MainActivity,GroupFragment::class.java).putExtra("item",2))
         }
 
         configureNavigationDrawer()
@@ -68,23 +87,24 @@ class MainActivity : AppCompatActivity() {
         viewpagers()
 
         appBarLayout.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, i ->
-            Logger.getLogger("offset").info("offset is : $i     total is :${appBarLayout.totalScrollRange}")
+            Logger.getLogger("offset")
+                .info("offset is : $i     total is :${appBarLayout.totalScrollRange}")
             var newOffset = abs(i)
             when {
-                newOffset > 500 && newOffset < 1000 -> {
+                newOffset in 501..999 -> {
 
-                    if (newOffset != appBarLayout.totalScrollRange){
-                        constSm.visibility = View.VISIBLE
-                        fadeIn(constSm)
-                    }
-                    loginBtn.visibility=View.INVISIBLE
+//                    if (newOffset != appBarLayout.totalScrollRange) {
+//                        constSm.visibility = View.VISIBLE
+//                        fadeIn(constSm)
+//                    }
+                    toolbar.visibility = View.INVISIBLE
                 }
                 newOffset < 100 -> {
-                    constSm.visibility = View.INVISIBLE
-                    loginBtn.visibility=View.VISIBLE
+//                    constSm.visibility = View.INVISIBLE
+                    toolbar.visibility = View.VISIBLE
                 }
                 newOffset > 1000 -> {
-                    loginBtn.visibility=View.VISIBLE
+                    toolbar.visibility = View.VISIBLE
                 }
             }
         })
@@ -124,8 +144,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun configureToolbar() {
-        toolbar = findViewById(R.id.tools_toolbarL)
+        toolbar = root.toolsToolbarL
         setSupportActionBar(toolbar)
+        supportActionBar!!.setDisplayShowTitleEnabled(false)
         toolbar.setNavigationOnClickListener {
             if (mDrawerLayout.isDrawerOpen(Gravity.RIGHT)) {
                 mDrawerLayout.closeDrawer(Gravity.RIGHT)
@@ -136,20 +157,47 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun configureNavigationDrawer() {
-        mDrawerLayout = findViewById(R.id.drawer_layoutL)
-        mNavigation = findViewById(R.id.navigation_viewL)
+        mDrawerLayout = root.drawerLayoutL
+        mNavigation = root.navigationViewL
 
         mNavigation.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.checkListDr -> {
-                    startActivity(Intent(this@MainActivity,CheckList2::class.java))
+                    startActivity(Intent(this@MainActivity, CheckList2::class.java))
                     return@setNavigationItemSelectedListener true
                 }
-//                R.id.tools_drw -> {
-//                    val intent = Intent(this@MainActivity, AppFragment()::class.java)
-//                    startActivity(intent)
-//                    return@setNavigationItemSelectedListener true
-//                }
+                R.id.loginDr -> {
+                    startActivity(Intent(this@MainActivity, LoginActivity::class.java))
+                    return@setNavigationItemSelectedListener true
+                }
+                R.id.addGroup -> {
+                    startActivity(Intent(this@MainActivity, RegisterGroup::class.java))
+                    return@setNavigationItemSelectedListener true
+                }
+                R.id.profileDr -> {
+                    startActivity(Intent(this@MainActivity, ProfileFragment::class.java))
+                    return@setNavigationItemSelectedListener true
+                }
+                R.id.groupDr -> {
+                    startActivity(Intent(this@MainActivity, GroupFragment::class.java).putExtra("item",2))
+                    return@setNavigationItemSelectedListener true
+                }
+                R.id.toolsDr -> {
+                    startActivity(Intent(this@MainActivity, AppFragment::class.java))
+                    return@setNavigationItemSelectedListener true
+                }
+                R.id.mapDr -> {
+                    startActivity(Intent(this@MainActivity, MapFragment::class.java))
+                    return@setNavigationItemSelectedListener true
+                }
+                R.id.storeDr -> {
+                    startActivity(Intent(this@MainActivity, StoreActivity::class.java))
+                    return@setNavigationItemSelectedListener true
+                }
+                R.id.exitAccount -> {
+                    finishAffinity()
+                    return@setNavigationItemSelectedListener true
+                }
                 else -> return@setNavigationItemSelectedListener false
             }
         }
@@ -202,9 +250,17 @@ class MainActivity : AppCompatActivity() {
         return false
     }
 
+    var doubleBackToExitPressedOnce = false
 
     override fun onBackPressed() {
-        finishAffinity()
+        if (doubleBackToExitPressedOnce) {
+            finishAffinity()
+        } else {
+            this.doubleBackToExitPressedOnce = true
+            Toast.makeText(this, "برای خروج دوباره کلیک کنید", Toast.LENGTH_SHORT).show()
+        }
+
+        Handler().postDelayed(Runnable { doubleBackToExitPressedOnce = false }, 1000)
     }
 
 }

@@ -7,30 +7,34 @@
         android:background="@drawable/splash2"
         android:contentDescription="@string/app_name">
 
-    <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/animation_view"
-            android:layout_width="300dp"
-            android:layout_height="300dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            app:layout_constraintBottom_toTopOf="@+id/textView4"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.493"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textview2"
-            app:layout_constraintVertical_bias="1.0"
-            app:lottie_autoPlay="true"
-            app:lottie_fileName="anim/preloader.json"
-            app:lottie_loop="true" />
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#7C000000"/>
 
+<!--    <com.airbnb.lottie.LottieAnimationView-->
+<!--            android:id="@+id/animation_view"-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="300dp"-->
+<!--            android:layout_marginStart="16dp"-->
+<!--            android:layout_marginEnd="16dp"-->
+<!--            android:layout_marginBottom="16dp"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/textView4"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintHorizontal_bias="0.493"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textview2"-->
+<!--            app:layout_constraintVertical_bias="1.0"-->
+<!--            app:lottie_autoPlay="true"-->
+<!--            app:lottie_fileName="anim/preloader.json"-->
+<!--            app:lottie_loop="true" />-->
     <com.hanks.htextview.typer.TyperTextView
             android:id="@+id/textview2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:fontFamily="@font/iransansweb"
-            android:text="کــوهنورد"
+            android:fontFamily="@font/yekan"
+            android:text="@string/app_name"
             android:textColor="@color/white"
             android:textSize="42sp"
             app:charIncrease="1"
@@ -57,13 +61,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:background="@drawable/background_flash_btn"
-            android:backgroundTint="#fff"
             android:paddingLeft="8dp"
             android:paddingRight="8dp"
-            android:text="version 1.1"
-            android:textColor="@color/black"
+            android:text="نسخه آزمایشی"
+            android:textColor="@color/blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/textview2"
             app:layout_constraintStart_toStartOf="@+id/textview2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,6 +1,7 @@
 package ir.nilgroup.mountain44.adapter
 
 import android.content.Context
+import android.graphics.drawable.Drawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,6 +37,17 @@ class EventAdapter(val arrayList: ArrayList<EventData>, val context: Context, va
         holder.eventDate.text = arrayList[position].date
         holder.eventNum.text = arrayList[position].numberRegisters.toString()
         holder.eventState.text = state
+        when(state) {
+            "درحال اجرا" -> {
+                holder.eventState.background= Drawable.createFromPath("drawable/background_yellow.xml")
+            }
+            "پیش رو" -> {
+                holder.eventState.background= Drawable.createFromPath("drawable/background_green.xml")
+            }
+            else -> {
+                holder.eventState.background= Drawable.createFromPath("drawable/background_red.xml")
+            }
+        }
         val stringBuilder = "event_back"
         val id = context.resources.getIdentifier(stringBuilder, "drawable", context.packageName)
         Glide.with(context).load(id).into(holder.eventImage)
